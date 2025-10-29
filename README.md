@@ -3,7 +3,4 @@ This is my personal portfolio website built using React + TypeScript + Vite + Ta
 
 
 ### Tech Stack
-Frontend: React + TypeScript + Vite
-Styling: Tailwind CSS (custom theme with Inter / Roboto Mono / Anka Coder fonts)
-Deployment: Vercel
-Version Control: Git + GitHub
+React, TypeScript, TailwindCSS, Vercel, Git
