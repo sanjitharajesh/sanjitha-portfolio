@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* optional: global tweaks */
+body {
+  @apply bg-bg text-fg font-inter antialiased;
+}
+
+/* ---- Typing animation ---- */
+.typing-line {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid currentColor;
+  white-space: nowrap;
+  animation: typing 6s steps(32, end) infinite, caret 600ms steps(1, end) infinite;
+}
+
+@keyframes typing {
+  0%, 10% {
+    width: 0;
+  }
+  45%, 55% {
+    width: 100%;
+  }
+  90%, 100% {
+    width: 0;
+  }
+}
+
+@keyframes caret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: currentColor;
+  }
+}
+
+.typing-wrap {
+  position: relative;
+  display: inline-block;
+  width: max-content;     
+}
+
+.typing-ghost {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;    
+}
+
+.typing-abs {
+  position: absolute;
+  inset: 0;
+}
