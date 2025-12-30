@@ -5,8 +5,8 @@ export default function Education() {
         Education
       </h2>
       <section className="grid gap-3 mt-4">
-        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft">
-          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-3">
+        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-3 pb-3 border-b border-border">
             <h3 className="font-mono font-semibold text-[16px]">Rutgers University - New Brunswick</h3>
             <span className="font-mono text-[13px] font-semibold opacity-90">New Brunswick, New Jersey</span>
           </div>
@@ -17,8 +17,8 @@ export default function Education() {
           <p className="opacity-90 mt-2">Coursework: Regression and Time Series Analysis, Data Wrangling, DSA, NLP, Database Management, Financial Data Mining (ML and Deep Learning), Statistics for Data Science</p>
         </article>
 
-        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft">
-          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-3">
+        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-3 pb-3 border-b border-border">
             <h3 className="font-mono font-semibold text-[16px]">Vellore Institute of Technology</h3>
             <span className="font-mono text-[13px] font-semibold opacity-90">Vellore, Tamil Nadu, India</span>
           </div>
@@ -29,8 +29,8 @@ export default function Education() {
           <p className="opacity-90 mt-2">Coursework: Database Management Systems, Data Structures and Algorithms, Machine Learning, Natural Language Processing, Data Visualization, Statistics, Cloud Computing, Artificial Intelligence</p>
         </article>
 
-        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft">
-          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-3">
+        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-3 pb-3 border-b border-border">
             <h3 className="font-mono font-semibold text-[16px]">Gandhi Memorial Intercontinental School, Jakarta</h3>
             <span className="font-mono text-[13px] font-semibold opacity-90">Feb 2008 - May 2020</span>
           </div>

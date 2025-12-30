@@ -1,107 +1,95 @@
 export default function Projects() {
+  const projects = [
+    {
+      title: "LLM-Powered Drug Query System (MediQuery)",
+      date: "Sep – Dec 2025",
+      description: "A privacy-first medication information assistant that uses AI to answer questions about FDA-approved drugs. The system runs entirely locally, ensuring patient data privacy while providing accurate, context-aware responses about drug interactions, side effects, and usage guidelines.",
+      tags: ["FastAPI", "ChromaDB", "Mistral-7B", "RAG", "SQLite"],
+      github: "https://github.com/sanjitharajesh/mediquery"
+    },
+    {
+      title: "CodeMixTranslate - Neural Machine Translation for Code-Switched Text",
+      date: "Oct – Dec 2025",
+      description: "A specialized translation system designed for bilingual speakers who mix languages (like Hinglish and Spanglish). The AI model understands and translates naturally code-switched sentences, making communication easier for multilingual communities.",
+      tags: ["PyTorch", "mT5", "MarianMT", "NLLB-200", "NMT"],
+      github: "https://github.com/sanjitharajesh/codemixtranslation"
+    },
+    {
+      title: "FinGuard - Financial Transaction Fraud Monitoring System",
+      date: "Oct – Dec 2025",
+      description: "An intelligent fraud detection platform that monitors financial transactions in real-time. The system automatically flags suspicious activities, analyzes merchant patterns, and sends instant alerts to prevent fraudulent transactions before they complete.",
+      tags: ["PostgreSQL", "Docker", "REST APIs", "Bootstrap"],
+      github: "https://github.com/sanjitharajesh/ftransaction-2025"
+    },
+    {
+      title: "Transfer Learning on Chest X-rays with EfficientNet",
+      date: "Feb – May 2025",
+      description: "A medical imaging AI that helps diagnose pneumonia and tuberculosis from chest X-rays. The system uses advanced deep learning techniques to achieve high accuracy, potentially assisting healthcare providers in early disease detection.",
+      tags: ["EfficientNet-B0", "PyTorch", "DANN", "Transfer Learning"],
+      github: "https://github.com/sanjitharajesh/efficientnet-xray"
+    },
+    {
+      title: "Somnisage – AI-based Sleep Stage Scoring (Capstone Project)",
+      date: "Jan – May 2024",
+      description: "An automated sleep analysis system that interprets brain wave patterns to identify different sleep stages. This tool can help sleep clinics analyze patient data more efficiently and identify potential sleep disorders.",
+      tags: ["TensorFlow", "Keras", "CNN", "BiLSTM", "EEG"],
+      github: "https://github.com/sanjitharajesh/somnisage"
+    },
+    {
+      title: "Air Quality Visualization Dashboard",
+      date: "Oct – Dec 2023",
+      description: "An interactive dashboard that tracks and visualizes air pollution trends across 50+ Indian cities over 13 years. The platform helps users understand pollution patterns and their health implications through intuitive charts and maps.",
+      tags: ["R", "Plotly", "ggplot2", "Flexdashboard"],
+      github: "https://github.com/sanjitharajesh/air-quality-vis"
+    },
+    {
+      title: "GestuRise – Hand Gesture Control",
+      date: "Jun – Jul 2023",
+      description: "A touchless computer control system that recognizes hand gestures through your webcam. Users can control presentations, navigate screens, and interact with applications using simple hand movements, improving accessibility and interaction.",
+      tags: ["MediaPipe", "TensorFlow", "OpenCV", "PyAutoGUI"],
+      github: "https://github.com/sanjitharajesh/gesturise"
+    },
+  ];
+
   return (
     <>
-      <h2 id="projects" className="font-mono font-bold text-[clamp(22px,3.2vw,30px)] mt-16 md:mt-64 scroll-mt-36 text-center">
+      <h2 id="projects" className="font-mono font-bold text-[clamp(22px,3.2vw,30px)] mt-16 md:mt-64 mb-8 scroll-mt-36 text-center">
         Projects
       </h2>
-      <section className="grid gap-3 mt-4">
-        {/* MediQuery */}
-        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft">
-          <div className="flex items-baseline justify-between gap-3">
-            <h3 className="font-mono font-semibold text-[16px]">MediQuery: Context-Aware Medication Assistant Using Local LLMs + RAG (in progress)</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">Jun – Aug 2025</span>
-          </div>
-          <p className="mt-3">Building a privacy-first FDA drug-guide Q&amp;A: local LLM (Mistral-7B) + RAG (ChromaDB), PyMuPDF ingestion, FastAPI endpoints, Docker deployment, SQLite storage.</p>
-          <div className="mt-4 flex flex-wrap justify-center gap-3">
-            {["Mistral-7B","RAG","ChromaDB","PyMuPDF","FastAPI","Docker","SQLite"].map(t => (
-              <span key={t} className="font-mono text-[12px] font-bold border-2 border-border rounded-full px-3 py-1">{t}</span>
-            ))}
-          </div>
-        </article>
-
-        {/* EfficientNet */}
-        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft">
-          <div className="flex items-baseline justify-between gap-3">
-            <h3 className="font-mono font-semibold text-[16px]">Transfer Learning on Chest X-rays with EfficientNet</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">Feb – May 2025</span>
-          </div>
-          <p className="mt-3">Fine-tuned EfficientNet-B0 on 5k+ chest X-rays with dataset-specific transfer learning and domain adaptation (DANN)—using selective layer unfreezing, label smoothing, threshold tuning, and targeted augmentation—achieving 92% pneumonia and 95% TB accuracy.</p>
-          <div className="mt-4 flex flex-wrap justify-center gap-3">
-            {["EfficientNet-B0","PyTorch","DANN"].map(t => (
-              <span key={t} className="font-mono text-[12px] font-bold border-2 border-border rounded-full px-3 py-1">{t}</span>
-            ))}
-          </div>
-        </article>
-
-        {/* World Happiness */}
-        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft">
-          <div className="flex items-baseline justify-between gap-3">
-            <h3 className="font-mono font-semibold text-[16px]">World Happiness Level Prediction</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">Oct – Dec 2024</span>
-          </div>
-          <p className="mt-3">Designed a prediction system by comparing the performance of Random Forest Regression and XGBoost models, using a dataset with 2,350 records. The final hybrid model obtained a mean squared error of 0.24492, outperforming individual models.</p>
-          <div className="mt-4 flex flex-wrap justify-center gap-3">
-            {["Random Forest","XGBoost","Regression","Python"].map(t => (
-              <span key={t} className="font-mono text-[12px] font-bold border-2 border-border rounded-full px-3 py-1">{t}</span>
-            ))}
-          </div>
-        </article>
-
-        {/* Somnisage */}
-        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft">
-          <div className="flex items-baseline justify-between gap-3">
-            <h3 className="font-mono font-semibold text-[16px]">Somnisage — AI-based Sleep Stage Scoring (Capstone Project)</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">Jan – May 2024</span>
-          </div>
-          <p className="mt-3">Designed and trained a sleep-stage pipeline on Sleep-EDF (197 PSGs) using twin CNN and CNN+BiLSTM; applied EEG filtering/feature engineering in TensorFlow/Keras; achieved 82% (CNN) and 84% (BiLSTM).</p>
-          <div className="mt-4 flex flex-wrap justify-center gap-3">
-            {["TensorFlow","Keras"].map(t => (
-              <span key={t} className="font-mono text-[12px] font-bold border-2 border-border rounded-full px-3 py-1">{t}</span>
-            ))}
-          </div>
-        </article>
-
-        {/* Air Quality */}
-        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft">
-          <div className="flex items-baseline justify-between gap-3">
-            <h3 className="font-mono font-semibold text-[16px]">Air Quality Vis</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">Oct – Dec 2023</span>
-          </div>
-          <p className="mt-3">Analyzed 60k+ air-quality records (2010–2023; 50+ Indian cities) and shipped an interactive R Flexdashboard (ggplot2, Plotly, dplyr) highlighting PM2.5/NO2/SO2 trends, including a ~30% PM2.5 rise in metros.</p>
-          <div className="mt-4 flex flex-wrap justify-center gap-3">
-            {["R","Plotly","ggplot2"].map(t => (
-              <span key={t} className="font-mono text-[12px] font-bold border-2 border-border rounded-full px-3 py-1">{t}</span>
-            ))}
-          </div>
-        </article>
-
-        {/* GestuRise */}
-        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft">
-          <div className="flex items-baseline justify-between gap-3">
-            <h3 className="font-mono font-semibold text-[16px]">GestuRise — Hand Gesture Control</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">Jun – Jul 2023</span>
-          </div>
-          <p className="mt-3">Engineered a real-time gesture-control system with MediaPipe landmarks + TensorFlow keypoint classifier (88%); integrated OpenCV/PyAutoGUI for slide/screen control, improving live-session interaction by 35%.</p>
-          <div className="mt-4 flex flex-wrap justify-center gap-3">
-            {["MediaPipe","TensorFlow","OpenCV","PyAutoGUI"].map(t => (
-              <span key={t} className="font-mono text-[12px] font-bold border-2 border-border rounded-full px-3 py-1">{t}</span>
-            ))}
-          </div>
-        </article>
-
-        {/* JPEG Error */}
-        <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft">
-          <div className="flex items-baseline justify-between gap-3">
-            <h3 className="font-mono font-semibold text-[16px]">JPEG Error Analysis</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">Dec 2022 – Apr 2023</span>
-          </div>
-          <p className="mt-3">Implemented JPEG compression error analysis (DCT/quantization) with OpenCV/NumPy; computed MSE/PSNR/SSIM and visualized recompression trends in Matplotlib, achieving a 3% false-positive rate.</p>
-          <div className="mt-4 flex flex-wrap justify-center gap-3">
-            {["OpenCV","NumPy","Matplotlib"].map(t => (
-              <span key={t} className="font-mono text-[12px] font-bold border-2 border-border rounded-full px-3 py-1">{t}</span>
-            ))}
-          </div>
-        </article>
+      <section className="grid md:grid-cols-2 gap-4 mt-6">
+        {projects.map((project, idx) => (
+          <article
+            key={idx}
+            className="bg-bg/80 backdrop-blur-sm border border-border rounded-2xl shadow-soft p-5 flex flex-col transition-transform duration-200 hover:scale-105"
+          >
+            <div className="flex items-start justify-between gap-3 mb-3 pb-3 border-b border-border">
+              <div className="flex-grow">
+                <h3 className="font-mono font-semibold text-[15px] leading-snug">{project.title}</h3>
+              </div>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-shrink-0 font-mono text-[11px] font-bold border-2 border-fg bg-fg text-bg rounded-full px-3 py-1 hover:bg-bg hover:text-fg transition-colors duration-200"
+                title="View source code"
+              >
+                CODE
+              </a>
+            </div>
+            <span className="font-mono text-[12px] font-semibold opacity-90 mb-3">{project.date}</span>
+            <p className="text-[15px] leading-relaxed flex-grow">{project.description}</p>
+            <div className="mt-4 flex flex-wrap gap-2 justify-center">
+              {project.tags.map(tag => (
+                <span
+                  key={tag}
+                  className="font-mono text-[11px] font-bold border-2 border-fg bg-fg text-bg rounded-full px-3 py-1 hover:bg-bg hover:text-fg transition-colors duration-200"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </article>
+        ))}
       </section>
     </>
   );
