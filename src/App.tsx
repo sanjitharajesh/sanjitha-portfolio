@@ -1,4 +1,5 @@
 import "./index.css";
+import SeasonalParticles from "./SeasonalParticles";
 import TopBar from "./components/TopBar";
 import Nav from "./components/Nav";
 import Intro from "./sections/Intro";
@@ -11,6 +12,7 @@ import Contact from "./sections/Contact";
 export default function App() {
   return (
     <div className="bg-bg text-fg font-inter antialiased">
+      <SeasonalParticles />
       <TopBar />
       <Nav />
       <main className="max-w-[1040px] mx-auto px-8">

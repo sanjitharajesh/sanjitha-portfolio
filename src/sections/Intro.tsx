@@ -1,13 +1,6 @@
-import type { MouseEvent } from "react";
 import profile from "../assets/profilephoto.jpeg";
 
 export default function Intro() {
-  const handleResumeClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (!window.confirm("Enable resume downloads on this site?")) {
-      event.preventDefault();
-    }
-  };
-
   return (
     <>
       <section aria-label="Intro" className="mt-44 mb-2">
@@ -28,20 +21,19 @@ export default function Intro() {
             </div>
 
             <div className="mt-4 font-inter text-center max-w-[880px] space-y-1">
-              <p className="text-[0.95rem] font-semibold">MSDS at Rutgers University (Graduating May 2026)</p>
-              
+              <p className="text-[0.95rem] font-semibold">MS In Statistics - Data Science at Rutgers University</p>
             </div>
 
             {/* Reformatted Boxed Title */}
             <div className="mt-5 font-inter text-center max-w-[1100px] w-full flex justify-center">
               <div className="w-full max-w-[1100px] transition-transform duration-300 hover:scale-105">
-                <div className="bg-bg/80 text-fg border border-border rounded-2xl shadow-soft backdrop-blur-sm p-7 min-h-[320px] flex flex-col justify-center">
+                <div className="bg-[#1a2a52]/95 text-[#e9f1ff] border border-[#2a3a6a] rounded-2xl shadow-soft p-7">
                   <div className="text-[0.95rem] leading-relaxed space-y-3">
                     <p>
-                      I'm extremely passionate about transforming data into insights using analytics and AI, and right now, I'm exploring how AI can support healthcare and wellness! My experience thus far from my internships covers working on end-to-end pipelines, building ML models and dashboards.
+                      Hi! I'm Sanjitha Rajesh, a data scientist, AI enthusiast, and avid developer and I build end-to-end AI and data solutions: scalable pipelines, ML models, and analytics dashboards that turn raw data into real decisions.
                     </p>
                     <p>
-                      I'm someone who loves challenges that will enable me to prove myself, and I also love collaborating with driven individuals who share a passion for growth: people I can learn from and exchange ideas with. Outside of tech, you'll usually find me listening to music or singing, reading a book, or sipping a coffee (or two...or three).
+                      I love challenges that push me to prove myself, and I do my best work alongside people who are just as driven, the kind you can trade ideas with and genuinely learn from. Outside of tech, you'll usually find me listening to music or singing, reading a book, or sipping a coffee (or two...or three).
                     </p>
                   </div>
                 </div>
@@ -53,21 +45,18 @@ export default function Intro() {
             <img
               src={profile}
               alt="Sanjitha Rajesh – profile photo"
-              className="w-[320px] sm:w-[320px] md:w-[340px] lg:w-[360px] rounded-xl shadow-soft"
+              className="w-[320px] sm:w-[320px] md:w-[340px] lg:w-[360px] rounded-xl shadow-soft transition-transform duration-200 hover:scale-105"
             />
 
             {/* CTA Buttons */}
             <div className="mt-6 w-full max-w-[200px] flex flex-col items-center gap-3">
               <a
-                className="font-mono tracking-wide border-2 border-fg bg-fg text-bg px-5 py-2.5 text-sm font-semibold rounded-full hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2 w-full"
-                href="https://drive.google.com/uc?export=download&id=1ILUjO6Hk3kJ2uOHhCGHQSru9K-OQkKOv"
+                className="font-mono tracking-wide border-2 border-fg bg-fg text-bg px-5 py-2.5 text-sm font-semibold rounded-full hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
+                href="https://docs.google.com/document/d/1yazQmnziGaWhmrZ-YlGMZg3N-uLxkh245esOXcp1Orw/edit?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
-                download="Sanjitha_Rajesh_Resume.pdf"
-                onClick={handleResumeClick}
               >
-                <span className="text-base" aria-hidden="true">↓</span>
-                <span>Download my CV</span>
+                <span>Resume</span>
               </a>
               <div className="flex flex-nowrap justify-center gap-3 w-full">
                 <a

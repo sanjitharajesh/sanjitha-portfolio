@@ -1,15 +1,18 @@
 export default function Experience() {
   return (
     <>
-      <h2 id="experience" className="font-mono font-bold text-[clamp(22px,3.2vw,30px)] mt-32 md:mt-64 mb-8 scroll-mt-36 text-center">
-        Experience
+      <h2 id="experience" className="font-mono font-bold text-[clamp(22px,3.2vw,30px)] mt-[93px] md:mt-64 mb-8 scroll-mt-36 text-center">
+        <span className="relative inline-block hover:scale-110 transition-all duration-200 group">
+          experience
+          <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>
+        </span>
       </h2>
-      <section className="grid gap-3 mt-4">
+      <section className="grid gap-6 mt-8">
         {/* Item 1 */}
         <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
-          <div className="flex items-baseline justify-between gap-3 pb-3 border-b border-border">
-            <h3 className="font-mono font-semibold text-[16px]">Statistics Grader, Rutgers University — New Brunswick, NJ</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">Sep 2024 – Present</span>
+          <div className="flex items-baseline justify-between gap-3 -mx-4 -mt-4 px-5 py-4 rounded-t-2xl bg-[#1a2a52]/95 mb-3">
+            <h3 className="font-mono font-semibold text-[16px] text-[#e9f1ff]">Statistics Grader, Rutgers University — New Brunswick, NJ</h3>
+            <span className="font-mono text-[13px] font-semibold text-[#dfe8ff] whitespace-nowrap">Sep 2024 – Present</span>
           </div>
           <div className="mt-3">
             <p>Assisted professors in grading undergraduate Statistics coursework and assessments, applying statistical concepts to evaluate accuracy. Provided constructive feedback to students to strengthen their understanding of quantitative reasoning.</p>
@@ -18,9 +21,9 @@ export default function Experience() {
 
         {/* Item 2 */}
         <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
-          <div className="flex items-baseline justify-between gap-3 pb-3 border-b border-border">
-            <h3 className="font-mono font-semibold text-[16px]">Business Intelligence Intern, Escape Enterprises LLC — Remote</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">Jun – Aug 2025</span>
+          <div className="flex items-baseline justify-between gap-3 -mx-4 -mt-4 px-5 py-4 rounded-t-2xl bg-[#1a2a52]/95 mb-3">
+            <h3 className="font-mono font-semibold text-[16px] text-[#e9f1ff]">Business Intelligence Intern, Escape Enterprises LLC — Remote</h3>
+            <span className="font-mono text-[13px] font-semibold text-[#dfe8ff] whitespace-nowrap">Jun – Aug 2025</span>
           </div>
           <div className="mt-3">
             <p className="mb-2">Implemented ETL pipelines and dashboards in Firebase and Power BI for Lucille, the AI self-care app, analyzing 5K+ product feature interactions (AI soundscapes, journaling) and monitored key KPIs that delivered insights on user engagement.</p>
@@ -35,9 +38,9 @@ export default function Experience() {
 
         {/* Item 3 */}
         <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
-          <div className="flex items-baseline justify-between gap-3 pb-3 border-b border-border">
-            <h3 className="font-mono font-semibold text-[16px]">Data Science Intern, Pt. TVS Motor Company Ltd., Bangalore, India</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">Jan – Apr 2024</span>
+          <div className="flex items-baseline justify-between gap-3 -mx-4 -mt-4 px-5 py-4 rounded-t-2xl bg-[#1a2a52]/95 mb-3">
+            <h3 className="font-mono font-semibold text-[16px] text-[#e9f1ff]">Data Science Intern, Pt. TVS Motor Company Ltd., Bangalore, India</h3>
+            <span className="font-mono text-[13px] font-semibold text-[#dfe8ff] whitespace-nowrap">Jan – Apr 2024</span>
           </div>
           <div className="mt-3">
             <p className="mb-2">Built ETL pipelines and SQL-backed workflows on Azure Databricks to process customer satisfaction data across 29 Indian states. Developed a Random Forest model (82% accuracy) to predict Net Promoter Scores and presented insights on key churn and satisfaction drivers.</p>
@@ -52,9 +55,9 @@ export default function Experience() {
 
         {/* Item 4 */}
         <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
-          <div className="flex items-baseline justify-between gap-3 pb-3 border-b border-border">
-            <h3 className="font-mono font-semibold text-[16px]">Deep Learning Research Intern, GAIP — National University of Singapore</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">June 2023</span>
+          <div className="flex items-baseline justify-between gap-3 -mx-4 -mt-4 px-5 py-4 rounded-t-2xl bg-[#1a2a52]/95 mb-3">
+            <h3 className="font-mono font-semibold text-[16px] text-[#e9f1ff]">Deep Learning Research Intern, GAIP — National University of Singapore</h3>
+            <span className="font-mono text-[13px] font-semibold text-[#dfe8ff] whitespace-nowrap">June 2023</span>
           </div>
           <div className="mt-3">
             <p>Constructed a real-time hand gesture recognition system to improve accessibility-driven interactions using Google MediaPipe for landmark extraction, TensorFlow, and PyAutoGUI to link gestures with control actions for 500+ user-fed video samples. Reached 86% classification accuracy.</p>
@@ -68,9 +71,9 @@ export default function Experience() {
 
         {/* Item 5 */}
         <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
-          <div className="flex items-baseline justify-between gap-3 pb-3 border-b border-border">
-            <h3 className="font-mono font-semibold text-[16px]">Data Analyst Intern, NTT Indonesia, Jakarta, Indonesia</h3>
-            <span className="font-mono text-[13px] font-semibold opacity-90 whitespace-nowrap">May – Aug 2022</span>
+          <div className="flex items-baseline justify-between gap-3 -mx-4 -mt-4 px-5 py-4 rounded-t-2xl bg-[#1a2a52]/95 mb-3">
+            <h3 className="font-mono font-semibold text-[16px] text-[#e9f1ff]">Data Analyst Intern, NTT Indonesia, Jakarta, Indonesia</h3>
+            <span className="font-mono text-[13px] font-semibold text-[#dfe8ff] whitespace-nowrap">May – Aug 2022</span>
           </div>
           <div className="mt-3">
             <p>Streamlined data warehousing and credit risk modeling (IFRS-9 compliance) on 4,000+ financial records using Python, R, and PostgreSQL; boosted calculation throughput by 16% and improved compliance monitoring. Built risk dashboards in Power BI and Excel.</p>
