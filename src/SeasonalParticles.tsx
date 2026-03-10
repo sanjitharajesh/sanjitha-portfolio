@@ -42,7 +42,12 @@ export default function SeasonalParticles() {
   }, []);
 
   const particles = Array.from({ length: PARTICLE_COUNT }, (_, i) => {
-    const left = Math.random() * 96 + 2; // 2%–98%
+    const zone = Math.random();
+    const left = zone < 0.4
+      ? Math.random() * 15          // left edge: 0–15%
+      : zone < 0.8
+        ? 85 + Math.random() * 15   // right edge: 85–100%
+        : 15 + Math.random() * 70;  // center: 15–85%
     const duration = 5 + Math.random() * 7; // 5s–12s
     const delay = Math.random() * 10; // stagger start
     const sway = (Math.random() - 0.5) * 60; // –30px to +30px

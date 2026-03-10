@@ -28,12 +28,20 @@ export default function Skills() {
         ].map(block => (
           <article
             key={block.title}
-            className="bg-bg/80 backdrop-blur-sm border border-border rounded-2xl shadow-soft p-5 flex flex-col w-full transition-transform duration-200 hover:scale-105"
+            className="bg-bg/80 backdrop-blur-sm border border-border rounded-2xl shadow-soft p-5 flex flex-col w-full transition-transform duration-200 hover:scale-105 overflow-hidden"
           >
-            <div className="-mx-5 -mt-5 px-5 py-4 rounded-t-2xl bg-[#1a2a52]/95 mb-4">
-              <h3 className="font-mono font-bold tracking-wide text-center text-[1rem] text-[#e9f1ff]">
-                {block.title}
-              </h3>
+            {/* macOS title bar */}
+            <div className="-mx-5 -mt-5 px-4 py-2.5 rounded-t-2xl bg-[#0f1e3d] mb-4 flex items-center gap-2 group/bar relative">
+              <span className="w-3 h-3 rounded-full bg-[#ff5f57] flex-shrink-0 flex items-center justify-center">
+                <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a0000] text-[8px] font-bold leading-none transition-opacity duration-150">×</span>
+              </span>
+              <span className="w-3 h-3 rounded-full bg-[#febc2e] flex-shrink-0 flex items-center justify-center">
+                <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a5500] text-[8px] font-bold leading-none transition-opacity duration-150">−</span>
+              </span>
+              <span className="w-3 h-3 rounded-full bg-[#28c840] flex-shrink-0 flex items-center justify-center">
+                <span className="opacity-0 group-hover/bar:opacity-100 text-[#003d00] text-[8px] font-bold leading-none transition-opacity duration-150">+</span>
+              </span>
+              <span className="absolute inset-0 flex items-center justify-center text-[#b0b8cc] text-sm font-mono font-semibold pointer-events-none">{block.title}</span>
             </div>
             <div className="flex flex-wrap gap-2 justify-center">
               {block.items.map(it => (

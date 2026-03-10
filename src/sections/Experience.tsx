@@ -1,13 +1,13 @@
 export default function Experience() {
   return (
     <>
-      <h2 id="experience" className="font-mono font-bold text-[clamp(22px,3.2vw,30px)] mt-[93px] md:mt-64 mb-8 scroll-mt-36 text-center">
+      <h2 id="experience" className="font-mono font-bold text-[clamp(22px,3.2vw,30px)] mt-[50px] md:mt-64 mb-12 scroll-mt-36 text-center">
         <span className="relative inline-block hover:scale-110 transition-all duration-200 group">
           experience
           <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>
         </span>
       </h2>
-      <section className="grid gap-6 mt-8">
+      <section className="grid gap-6 mt-12">
         {/* Item 1 */}
         <article className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
           <div className="flex items-baseline justify-between gap-3 -mx-4 -mt-4 px-5 py-4 rounded-t-2xl bg-[#1a2a52]/95 mb-3">
