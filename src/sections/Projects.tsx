@@ -1,59 +1,87 @@
 export default function Projects() {
   const projects = [
     {
+      title: "Consumer Payment Behavior Analysis",
+      date: "Jan – Mar 2026",
+      bullets: [
+        "Analyzed 58,000+ records across 3 federal financial datasets (FDIC, CFPB) using Python; applied causal inference methods including Mann-Whitney U and Chi-square hypothesis tests to quantify behavioral differences between digital and cash payment users.",
+        "Surfaced a 13.24x odds ratio among banked individuals and a 24pp savings gap for BNPL users.",
+        "Extended statistical findings into a deployed Financial Vulnerability Risk Scorer (Django + React) translating SHED-derived odds ratios and BNPL risk into personalized financial risk tiers and targeted guidance for underserved users.",
+      ],
+      github: "#"
+    },
+    {
       title: "BillBuddy: AI Receipt Splitting Agent",
       date: "Jan 2026",
-      description: "Built an automated expense-splitting agent that parses receipts end-to-end using OCR and GPT-4.1-mini for intelligent item extraction and cost allocation, with Splitwise API integration for seamless workflow automation — achieving ~7s end-to-end latency.",
-      tags: ["FastAPI", "Azure Computer Vision", "GPT-4.1-mini", "Splitwise API", "Python"],
+      bullets: [
+        "Designed a 3-stage document intelligence pipeline using Azure Computer Vision OCR and GPT-4-Turbo with structured JSON extraction and output schema enforcement, achieving 88% field-level and 92% document-level accuracy across 50 receipt layouts at $0.01 per document.",
+        "Built a Next.js and FastAPI full-stack application with a 4-stage human-in-the-loop validation workflow and Splitwise REST API integration, computing per-person paid/owed splits with 7s end-to-end latency.",
+      ],
       github: "https://github.com/sanjitharajesh/billbuddy"
     },
     {
-      title: "MediQuery - LLM-Powered Drug Query System",
+      title: "MediQuery — LLM-Powered Drug Query System",
       date: "Dec 2025",
-      description: "Deployed Groq-hosted Llama-3.3-70B with LangChain orchestration over a RAG pipeline using hybrid retrieval (BM25 + Pinecone vector database with sentence-transformers) across 100+ FDA drug label documents with semantic chunking, achieving 87% answer accuracy, <5% hallucination rate, and sub-6s end-to-end latency.",
-      tags: ["LangChain", "Groq", "Pinecone", "Python"],
+      bullets: [
+        "Architected a hybrid RAG pipeline over 100+ FDA drug label PDFs using BM25 and Pinecone vector retrieval (384-dim cosine index) with round-robin merge, orchestrated via LangChain with Groq-hosted Llama-3.3-70B.",
+        "Benchmarked local (Ollama/Mistral) vs. hosted (Groq/Llama-3.3-70B) inference configurations with Langfuse tracing for per-query latency and token cost monitoring.",
+        "Built a 19-query RAGAS evaluation framework across 7 categories including expected-failure cases, achieving 87% accuracy and under 5% hallucination rate.",
+      ],
       github: "https://github.com/sanjitharajesh/mediquery"
     },
     {
-      title: "CodeMixTranslate - Neural Machine Translation for Code-Switched Text",
+      title: "FinGuard — Financial Transaction Fraud Monitoring System",
       date: "Oct – Dec 2025",
-      description: "A specialized translation system designed for bilingual speakers who mix languages (like Hinglish and Spanglish). The AI model understands and translates naturally code-switched sentences, making communication easier for multilingual communities.",
-      tags: ["PyTorch"],
-      github: "https://github.com/sanjitharajesh/codemixtranslation"
+      bullets: [
+        "Designed a fraud detection backend in Flask and PostgreSQL implementing configurable rule-based detection across 24 merchant risk tiers — amount threshold checks and spend spike detection vs. a 30-day rolling average.",
+        "Containerized with Docker, with automated alert workflows and admin dashboards.",
+        "Integrated a natural language to SQL interface using SQLCoder-7B via Ollama, enabling non-technical admins to query transaction data in plain English without writing SQL.",
+      ],
+      github: "https://github.com/sanjitharajesh/ftransaction-2025"
     },
     {
-      title: "FinGuard - Financial Transaction Fraud Monitoring System",
+      title: "CodeMixTranslate — Neural Machine Translation for Code-Switched Text",
       date: "Oct – Dec 2025",
-      description: "An intelligent fraud detection platform that monitors financial transactions in real-time. The system automatically flags suspicious activities, analyzes merchant patterns, and sends instant alerts to prevent fraudulent transactions before they complete.",
-      tags: ["PostgreSQL", "Docker", "Bootstrap"],
-      github: "https://github.com/sanjitharajesh/ftransaction-2025"
+      bullets: [
+        "Designed a multilingual translation pipeline in PyTorch benchmarking mT5, MarianMT, and NLLB-200 on 743 low-resource Hinglish and Spanglish samples.",
+        "Evaluated model performance using BLEU scoring across all architectures, achieving a best score of 63.12 with NLLB-200 on code-mixed translation tasks.",
+      ],
+      github: "https://github.com/sanjitharajesh/codemixtranslation"
     },
     {
       title: "Transfer Learning on Chest X-rays with EfficientNet",
       date: "Feb – May 2025",
-      description: "A medical imaging AI that helps diagnose pneumonia and tuberculosis from chest X-rays. The system uses advanced deep learning techniques to achieve high accuracy, potentially assisting healthcare providers in early disease detection.",
-      tags: ["EfficientNet-B0", "PyTorch"],
+      bullets: [
+        "Fine-tuned EfficientNet-B0 in PyTorch for multi-class pneumonia and tuberculosis classification from chest X-ray images.",
+        "Built an end-to-end inference pipeline with data augmentation and hyperparameter tuning to optimize classification performance across disease categories.",
+      ],
       github: "https://github.com/sanjitharajesh/efficientnet-xray"
     },
     {
-      title: "Somnisage – AI-based Sleep Stage Scoring (Capstone Project)",
+      title: "SomniSage — Sleep Stage Classification",
       date: "Jan – May 2024",
-      description: "An automated sleep analysis system that interprets brain wave patterns to identify different sleep stages. This tool can help sleep clinics analyze patient data more efficiently and identify potential sleep disorders.",
-      tags: ["TensorFlow", "Keras"],
+      bullets: [
+        "Built deep learning pipelines to classify sleep stages from PSG physiological signals using twin CNN (82% accuracy) and Bi-LSTM (84% accuracy) architectures in PyTorch.",
+        "Performed multi-channel signal preprocessing, temporal alignment, artifact rejection, and data quality control on high-dimensional clinical time-series data.",
+      ],
       github: "https://github.com/sanjitharajesh/somnisage"
     },
     {
-      title: "Air Quality Visualization Dashboard",
+      title: "Air Quality Analysis Dashboard",
       date: "Oct – Dec 2023",
-      description: "An interactive dashboard that tracks and visualizes air pollution trends across 50+ Indian cities over 13 years. The platform helps users understand pollution patterns and their health implications through intuitive charts and maps.",
-      tags: ["R", "Plotly"],
+      bullets: [
+        "Analyzed 6,000+ air quality records (2010–2023, 50+ cities) and developed an interactive R Flexdashboard using ggplot2, Plotly, and dplyr with time series trend analysis.",
+        "Identified a 30% PM2.5 increase in metro areas; presented as a stakeholder-facing data storytelling report with policy-relevant findings.",
+      ],
       github: "https://github.com/sanjitharajesh/air-quality-vis"
     },
     {
-      title: "GestuRise – Hand Gesture Control",
+      title: "GestuRise — Hand Gesture Control System",
       date: "Jun – Jul 2023",
-      description: "A touchless computer control system that recognizes hand gestures through your webcam. Users can control presentations, navigate screens, and interact with applications using simple hand movements, improving accessibility and interaction.",
-      tags: ["MediaPipe", "TensorFlow", "OpenCV", "PyAutoGUI"],
+      bullets: [
+        "Built at NUS. A real-time hand gesture recognition system using MediaPipe for landmark extraction, TensorFlow for model training, and PyAutoGUI for gesture-to-action mapping.",
+        "Achieved 86% classification accuracy on 500+ video samples through a dual classifier architecture — MLP for static signs and LSTM for dynamic gesture sequences.",
+      ],
       github: "https://github.com/sanjitharajesh/gesturise"
     },
   ];
@@ -87,17 +115,11 @@ export default function Projects() {
               </a>
             </div>
             <span className="font-mono text-[12px] font-semibold opacity-90 mb-3">{project.date}</span>
-            <p className="text-[15px] leading-relaxed">{project.description}</p>
-            <div className="mt-2 flex flex-wrap gap-2 justify-center">
-              {project.tags.map(tag => (
-                <span
-                  key={tag}
-                  className="font-mono text-[11px] font-bold border-2 border-fg bg-fg text-bg rounded-full px-3 py-1 hover:bg-bg hover:text-fg transition-colors duration-200"
-                >
-                  {tag}
-                </span>
+            <ul className="list-disc list-outside ml-4 space-y-1.5 text-[15px] leading-relaxed flex-grow">
+              {project.bullets.map((bullet, i) => (
+                <li key={i}>{bullet}</li>
               ))}
-            </div>
+            </ul>
           </article>
         ))}
       </section>

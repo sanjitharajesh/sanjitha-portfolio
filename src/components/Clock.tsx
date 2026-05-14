@@ -5,12 +5,17 @@ export default function Clock() {
   const [location, setLocation] = useState("Local Time");
 
   useEffect(() => {
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    if (tz) {
+    const tzFallback = () => {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
       const parts = tz.split("/");
       const city = parts[parts.length - 1]?.replace(/_/g, " ");
       setLocation(city || "Local Time");
-    }
+    };
+
+    fetch("https://ipapi.co/json/")
+      .then(r => r.json())
+      .then(data => { if (data.city) setLocation(data.city); else tzFallback(); })
+      .catch(tzFallback);
 
     const update = () => {
       const now = new Date();
