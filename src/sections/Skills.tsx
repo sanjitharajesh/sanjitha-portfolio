@@ -10,20 +10,20 @@ export default function Skills() {
       <section className="mt-9 grid sm:grid-cols-2 gap-8 max-w-[960px] mx-auto">
         {[
           {
-            title: "Programming & Databases",
-            items: ["Python", "SQL", "R", "Bash", "PostgreSQL", "MongoDB"]
+            title: "Programming",
+            items: ["Python", "SQL", "R", "PostgreSQL", "SQL Server", "Jupyter", "Git", "Pandas", "NumPy", "SciPy", "Matplotlib", "Seaborn"]
           },
           {
-            title: "ML & GenAI",
-            items: ["PyTorch", "scikit-learn", "TensorFlow", "MLflow", "RAG", "LangChain", "Prompt Engineering", "Ollama"]
+            title: "GenAI",
+            items: ["RAG", "LangChain", "Pinecone", "Langfuse", "RAGAS", "Hugging Face", "OpenAI API", "Ollama", "Fine-tuning (LoRA)", "Transformers", "NLP"]
           },
           {
-            title: "Analytics & Visualization",
-            items: ["Pandas", "NumPy", "Tableau", "Power BI", "Plotly", "Matplotlib"]
+            title: "Frameworks",
+            items: ["FastAPI", "Flask", "Django", "Node.js", "React", "REST APIs", "Postman", "Firebase", "Docker", "AWS", "Azure", "GCP"]
           },
           {
-            title: "Cloud, Frameworks & Deployment",
-            items: ["AWS", "Azure", "GCP BigQuery", "Docker", "FastAPI", "REST APIs", "CI/CD Pipelines", "Git"]
+            title: "Analytics",
+            items: ["scikit-learn", "PyTorch", "TensorFlow", "XGBoost", "Random Forest", "MLflow", "Weights & Biases", "Hypothesis Testing", "A/B Testing", "Causal Inference", "Regression", "Time Series", "Bayesian Analysis", "ANOVA", "Tableau", "Power BI", "Excel"]
           },
         ].map(block => (
           <article

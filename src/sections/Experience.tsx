@@ -16,8 +16,7 @@ export default function Experience() {
           </div>
           <div className="mt-3">
             <ul className="list-disc list-outside ml-4 space-y-1.5 text-[15px] leading-relaxed">
-              <li>Quantifying implicit racial bias across 16 identity groups in Vision Language Models (GPT-4o, Claude) via a reverse correlation paradigm.</li>
-              <li>Engineering a modular PyTorch pipeline to synthesize 300+ StyleGAN2 face stimuli via W+ latent space perturbation on a SLURM HPC cluster and automate Classification Image (CI) score computation to compare human vs. AI mental representations of race and identity.</li>
+              <li>Quantifying implicit racial bias across 16 identity groups in Vision Language Models (GPT-4o, Claude) via a reverse correlation paradigm to compare human vs. AI mental representations of race and identity.</li>
             </ul>
             <div className="mt-4 flex flex-wrap justify-center gap-3">
               {["PyTorch", "StyleGAN2", "GPT-4o", "Claude", "SLURM"].map(t => (
