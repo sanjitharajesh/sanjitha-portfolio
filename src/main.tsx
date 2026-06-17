@@ -1,12 +1,7 @@
-import React from "react";
-import { hydrateRoot, createRoot } from "react-dom/client";
+import { ViteReactSSG } from "vite-react-ssg";
 import App from "./App";
 import "./index.css";
 
-const rootElement = document.getElementById("root")!;
-
-if (rootElement.hasChildNodes()) {
-  hydrateRoot(rootElement, <React.StrictMode><App /></React.StrictMode>);
-} else {
-  createRoot(rootElement).render(<React.StrictMode><App /></React.StrictMode>);
-}
+export const createRoot = ViteReactSSG(
+  { routes: [{ path: "/", element: <App /> }] }
+);
