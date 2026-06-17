@@ -3,10 +3,10 @@ import profile from "../assets/profilephoto.jpeg";
 export default function Intro() {
   return (
     <>
-      <section aria-label="Intro" className="mt-[166px] mb-2">
+      <section aria-label="Intro" className="mt-[88px] mb-2">
         <div className="max-w-[1040px] mx-auto px-8 flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-28">
           <div className="w-full lg:w-auto flex flex-col items-center text-center -mt-6 lg:-mt-10">
-            <div className="font-courier font-light text-[clamp(26px,3.2vw,34px)] leading-relaxed max-w-[880px] flex flex-col items-center gap-3">
+            <div className="font-mono font-light text-[clamp(26px,3.2vw,34px)] leading-relaxed max-w-[880px] flex flex-col items-center gap-3">
               <span className="typing-wrap">
                 {/* Ghost text reserves layout space */}
                 <span className="typing-ghost" aria-hidden="true">
@@ -68,7 +68,7 @@ export default function Intro() {
             <div className="mt-6 w-full max-w-[200px] flex flex-col items-center gap-3">
               <a
                 className="font-inter tracking-wide border-2 border-fg bg-fg text-bg px-5 py-2.5 text-sm font-semibold rounded-full hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
-                href="https://docs.google.com/document/d/1yazQmnziGaWhmrZ-YlGMZg3N-uLxkh245esOXcp1Orw/edit?usp=sharing"
+                href="https://drive.google.com/file/d/1Ww3V7GDXizX8vWTHZArAMa2BtnfTH3GO/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >

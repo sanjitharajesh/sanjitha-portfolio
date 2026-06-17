@@ -60,7 +60,7 @@ const experiences = [
 export default function Experience() {
   return (
     <>
-      <h2 id="experience" className="font-mono font-bold text-[clamp(28px,4vw,38px)] mt-[50px] md:mt-64 mb-12 scroll-mt-36 text-center">
+      <h2 id="experience" className="font-inter font-bold text-[clamp(28px,4vw,38px)] mt-[50px] md:mt-64 mb-12 scroll-mt-36 text-center">
         <span className="relative inline-block hover:scale-110 transition-all duration-200 group">
           experience
           <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>
@@ -69,18 +69,31 @@ export default function Experience() {
       <section className="grid gap-6 mt-12">
         {experiences.map((exp) => (
           <article key={exp.company} className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
-            <div className="-mx-4 -mt-4 px-5 py-3 rounded-t-2xl bg-[#1a2a52]/95 mb-3">
-              <div className="flex items-baseline justify-between">
-                <span className="font-mono font-semibold text-[15px] text-[#e9f1ff]">{exp.company}</span>
-                <span className="font-mono text-[13px] font-semibold text-[#dfe8ff] whitespace-nowrap">{exp.location}</span>
+            <div className="-mx-4 -mt-4 px-4 py-3 rounded-t-2xl bg-[#1a2a52]/95 mb-3 flex items-start gap-3 group/bar">
+              <div className="flex gap-1.5 pt-[3px] flex-shrink-0">
+                <span className="w-3 h-3 rounded-full bg-[#ff5f57] flex items-center justify-center">
+                  <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a0000] text-[8px] font-bold leading-none transition-opacity duration-150">×</span>
+                </span>
+                <span className="w-3 h-3 rounded-full bg-[#febc2e] flex items-center justify-center">
+                  <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a5500] text-[8px] font-bold leading-none transition-opacity duration-150">−</span>
+                </span>
+                <span className="w-3 h-3 rounded-full bg-[#28c840] flex items-center justify-center">
+                  <span className="opacity-0 group-hover/bar:opacity-100 text-[#003d00] text-[8px] font-bold leading-none transition-opacity duration-150">+</span>
+                </span>
               </div>
-              <div className="flex items-baseline justify-between mt-1">
-                <span className="text-[14px] text-[#c8d4f0]">{exp.role}</span>
-                <span className="text-[14px] text-[#c8d4f0] whitespace-nowrap">{exp.date}</span>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-baseline justify-between gap-2">
+                  <span className="font-mono font-semibold text-[15px] text-[#e9f1ff] truncate">{exp.company}</span>
+                  <span className="font-mono text-[12px] font-semibold text-[#dfe8ff] whitespace-nowrap flex-shrink-0">{exp.location}</span>
+                </div>
+                <div className="flex items-baseline justify-between gap-2 mt-1">
+                  <span className="font-inter text-[13px] text-[#c8d4f0]">{exp.role}</span>
+                  <span className="font-mono text-[12px] text-[#c8d4f0] whitespace-nowrap flex-shrink-0">{exp.date}</span>
+                </div>
               </div>
             </div>
             <div className="mt-3">
-              <ul className="list-disc list-outside ml-4 space-y-1.5 text-[15px] leading-relaxed">
+              <ul className="list-disc list-outside ml-4 space-y-1.5 text-[15px] leading-relaxed font-inter">
                 {exp.bullets.map((b, i) => (
                   <li key={i}>{b}</li>
                 ))}

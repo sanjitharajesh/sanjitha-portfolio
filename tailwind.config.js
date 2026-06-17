@@ -8,11 +8,8 @@ export default {
         border: "#DAE0E9",
       },
       fontFamily: {
-        inter: ['"Open Sauce One"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['"Source Serif Pro"', 'Georgia', 'serif'],
-        courier: ['"Courier New"', 'Courier', 'monospace'],
-        anka: ['Anka Coder', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
-        quote: ['"Arial MT Pro"', 'Arial', 'sans-serif'],
+        inter: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       boxShadow: { soft: "0 8px 30px rgba(0,0,0,.06)" },
       maxWidth: { "62ch": "62ch" },

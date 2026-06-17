@@ -1,6 +1,5 @@
 import "./index.css";
 import TopBar from "./components/TopBar";
-import Nav from "./components/Nav";
 import Intro from "./sections/Intro";
 import Experience from "./sections/Experience";
 import Education from "./sections/Education";
@@ -13,7 +12,6 @@ export default function App() {
   return (
     <div className="bg-bg text-fg font-inter antialiased">
       <TopBar />
-      <Nav />
       <main className="max-w-[1040px] mx-auto px-8">
         <Intro />
         <Experience />

@@ -22,12 +22,7 @@ export default function Contact() {
             <span aria-hidden="true">📍</span>
             <span>New Brunswick, NJ</span>
           </p>
-          <p className="font-mono text-[0.9rem]">
-            <a className="underline hover:opacity-75 transition-opacity" href="mailto:sanjitharajesh03@gmail.com">
-              sanjitharajesh03@gmail.com
-            </a>
-          </p>
-          <div className="flex gap-3 mt-1">
+          <div className="flex gap-3">
             <a
               href="mailto:sanjitharajesh03@gmail.com"
               className="font-mono text-[12px] font-bold border-2 border-[#122654] text-[#122654] rounded-full px-4 py-1.5 hover:bg-[#122654] hover:text-[#E6EDF4] transition-colors duration-200"
