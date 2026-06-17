@@ -24,6 +24,13 @@ export default function Nav() {
           <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>
         </a>
         <a
+          href="#research"
+          className="relative hover:text-[17px] hover:scale-125 transition-all duration-200 group"
+        >
+          research
+          <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a
           href="#education"
           className="relative hover:text-[17px] hover:scale-125 transition-all duration-200 group"
         >

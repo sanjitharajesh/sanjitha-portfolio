@@ -19,7 +19,7 @@ export default function Skills() {
           },
           {
             title: "Frameworks",
-            items: ["FastAPI", "Flask", "Django", "Node.js", "React", "Postman", "Firebase", "Docker", "Kubernetes", "AWS", "Azure"]
+            items: ["FastAPI", "Flask", "Django", "React", "Postman", "Firebase", "Docker", "Kubernetes", "AWS", "Azure"]
           },
           {
             title: "Analytics",

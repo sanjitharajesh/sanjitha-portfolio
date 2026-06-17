@@ -6,6 +6,7 @@ import Experience from "./sections/Experience";
 import Education from "./sections/Education";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
+import Research from "./sections/Research";
 import Contact from "./sections/Contact";
 
 export default function App() {
@@ -18,10 +19,11 @@ export default function App() {
         <Experience />
         <Projects />
         <Skills />
+        <Research />
         <Education />
         <Contact />
         <footer className="text-center mt-16 pb-6">
-          <p className="text-sm opacity-90">© 2025 Sanjitha Rajesh</p>
+          <p className="text-sm opacity-90">© 2026 Sanjitha Rajesh</p>
           <p className="text-xs opacity-80 mt-2">Built with React, TypeScript, TailwindCSS</p>
         </footer>
       </main>

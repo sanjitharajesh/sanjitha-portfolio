@@ -14,7 +14,7 @@ export default function Education() {
             <span className="font-mono text-[13px] font-semibold text-[#dfe8ff]">New Brunswick, New Jersey</span>
           </div>
           <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-3 mt-2">
-            <p className="font-mono">Master of Science in Statistics - Data Science (GPA - 3.41/4)</p>
+            <p className="font-mono">Master of Science in Statistics - Data Science</p>
             <span className="font-mono text-[13px] font-semibold opacity-90">Sep 2024 - May 2026 (Expected)</span>
           </div>
           <p className="opacity-90 mt-2">Coursework: Regression and Time Series Analysis, Data Wrangling, DSA, NLP, Database Management, Financial Data Mining (ML and Deep Learning), Statistics for Data Science</p>
@@ -30,13 +30,6 @@ export default function Education() {
             <span className="font-mono text-[13px] font-semibold opacity-90">Sep 2020 - July 2024</span>
           </div>
           <p className="opacity-90 mt-2">Coursework: Database Management Systems, Data Structures and Algorithms, Machine Learning, Natural Language Processing, Data Visualization, Statistics, Cloud Computing, Artificial Intelligence</p>
-        </article>
-
-        <article className="bg-[#1a2a52]/95 border border-[#2a3a6a] rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
-          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-3">
-            <h3 className="font-mono font-semibold text-[16px] text-[#e9f1ff]">Gandhi Memorial Intercontinental School, Jakarta</h3>
-            <span className="font-mono text-[13px] font-semibold text-[#dfe8ff]">Feb 2008 - May 2020</span>
-          </div>
         </article>
       </section>
     </>

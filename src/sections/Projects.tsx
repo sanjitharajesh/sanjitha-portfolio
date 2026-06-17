@@ -1,9 +1,11 @@
+type Project = { title: string; date: string; description: string; github: string; demo?: string };
+
 export default function Projects() {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Consumer Payment Behavior Analysis",
       date: "Jan – Mar 2026",
-      description: "Analyzed 58,000+ records across federal financial data using Python; applied causal inference methods to quantify behavioral differences between digital and cash payment users. Deployed an application - Financial Vulnerability Risk Scorer (Django + React) translating odds ratios and BNPL risk into personalized financial risk tiers and targeted guidance for underserved users.",
+      description: "Analyzed 58,000+ records across 3 federal financial datasets (FDIC, CFPB, SHED); applied causal inference methods including Mann-Whitney U and Chi-square tests, revealing a 13.24x odds ratio among banked individuals and a 24pp savings gap for BNPL users. Deployed the Financial Vulnerability Risk Scorer in Django and React translating statistical findings into personalized financial risk tiers for underserved users.",
       github: "#"
     },
     {
@@ -15,8 +17,9 @@ export default function Projects() {
     {
       title: "MediQuery - LLM-Powered Drug Query System",
       date: "Dec 2025",
-      description: "Architected a hybrid RAG pipeline over 100+ FDA drug label PDFs using BM25 and Pinecone vector retrieval orchestrated via LangChain, using Langfuse tracing to benchmark local vs. hosted configurations. Built a 19-query RAGAS evaluation framework across 7 categories including expected-failure cases.",
-      github: "https://github.com/sanjitharajesh/mediquery"
+      description: "Architected a production RAG system over 141 FDA drug label PDFs using hybrid BM25-Pinecone retrieval with section-aware chunking, Langfuse observability, and a 19-query RAGAS evaluation framework achieving 87% accuracy and under 5% hallucination rate. Features query decomposition for multi-drug queries, brand name normalization, corpus coverage detection, and automatic FDA label versioning via DailyMed.",
+      github: "https://github.com/sanjitharajesh/mediquery",
+      demo: "https://mediquery.onrender.com"
     },
     {
       title: "FinGuard- Fraud Monitor",
@@ -84,15 +87,28 @@ export default function Projects() {
             </div>
             <div className="flex items-center justify-between mb-3">
               <span className="font-mono text-[12px] font-semibold opacity-90">{project.date}</span>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="font-mono text-[11px] font-bold border border-fg bg-bg text-fg rounded-full px-3 py-1 hover:bg-fg hover:text-bg transition-colors duration-200"
-                title="View source code"
-              >
-                CODE
-              </a>
+              <div className="flex gap-2">
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-mono text-[11px] font-bold border border-fg bg-fg text-bg rounded-full px-3 py-1 hover:bg-bg hover:text-fg transition-colors duration-200"
+                    title="View demo"
+                  >
+                    DEMO
+                  </a>
+                )}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-mono text-[11px] font-bold border border-fg bg-bg text-fg rounded-full px-3 py-1 hover:bg-fg hover:text-bg transition-colors duration-200"
+                  title="View source code"
+                >
+                  CODE
+                </a>
+              </div>
             </div>
             <p className="text-[15px] leading-relaxed">{project.description}</p>
           </article>
