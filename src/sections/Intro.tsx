@@ -6,16 +6,16 @@ export default function Intro() {
       <section aria-label="Intro" className="mt-[166px] mb-2">
         <div className="max-w-[1040px] mx-auto px-8 flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-28">
           <div className="w-full lg:w-auto flex flex-col items-center text-center -mt-6 lg:-mt-10">
-            <div className="font-anka font-normal text-[clamp(26px,3.2vw,34px)] leading-relaxed max-w-[880px] flex flex-col items-center gap-3">
+            <div className="font-courier font-light text-[clamp(26px,3.2vw,34px)] leading-relaxed max-w-[880px] flex flex-col items-center gap-3">
               <span className="typing-wrap">
                 {/* Ghost text reserves layout space */}
                 <span className="typing-ghost" aria-hidden="true">
-                  Hi, I'm <span className="font-semibold">Sanjitha Rajesh.</span>
+                  Hi, I'm <span className="font-light">Sanjitha Rajesh.</span>
                 </span>
 
                 {/* Animated text sits on top */}
                 <span className="typing-line typing-abs">
-                  Hi, I'm <span className="font-semibold">Sanjitha Rajesh.</span>
+                  Hi, I'm <span className="font-light">Sanjitha Rajesh.</span>
                 </span>
               </span>
             </div>
@@ -67,7 +67,7 @@ export default function Intro() {
             {/* CTA Buttons */}
             <div className="mt-6 w-full max-w-[200px] flex flex-col items-center gap-3">
               <a
-                className="font-mono tracking-wide border-2 border-fg bg-fg text-bg px-5 py-2.5 text-sm font-semibold rounded-full hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
+                className="font-inter tracking-wide border-2 border-fg bg-fg text-bg px-5 py-2.5 text-sm font-semibold rounded-full hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2"
                 href="https://docs.google.com/document/d/1yazQmnziGaWhmrZ-YlGMZg3N-uLxkh245esOXcp1Orw/edit?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
@@ -76,7 +76,7 @@ export default function Intro() {
               </a>
               <div className="flex flex-nowrap justify-center gap-3 w-full">
                 <a
-                  className="font-mono tracking-wide border border-[#2a3a6a] bg-bg text-fg px-4 py-2 text-xs font-semibold rounded-full hover:border-fg hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                  className="font-inter tracking-wide border border-[#2a3a6a] bg-bg text-fg px-4 py-2 text-xs font-semibold rounded-full hover:border-fg hover:scale-105 transition-all duration-200 flex items-center gap-2"
                   href="https://www.linkedin.com/in/sanjitharajesh/"
                   target="_blank"
                   rel="noreferrer"
@@ -84,7 +84,7 @@ export default function Intro() {
                   LinkedIn
                 </a>
                 <a
-                  className="font-mono tracking-wide border border-[#2a3a6a] bg-bg text-fg px-4 py-2 text-xs font-semibold rounded-full hover:border-fg hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                  className="font-inter tracking-wide border border-[#2a3a6a] bg-bg text-fg px-4 py-2 text-xs font-semibold rounded-full hover:border-fg hover:scale-105 transition-all duration-200 flex items-center gap-2"
                   href="https://github.com/sanjitharajesh"
                   target="_blank"
                   rel="noreferrer"

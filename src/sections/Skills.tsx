@@ -11,26 +11,25 @@ export default function Skills() {
         {[
           {
             title: "Programming",
-            items: ["Python", "SQL", "R", "PostgreSQL", "SQL Server", "Jupyter", "Git", "Pandas", "NumPy", "SciPy", "Matplotlib", "Seaborn"]
+            items: ["Python", "SQL", "PostgreSQL", "R", "Bash", "TypeScript", "Java (basic)"]
           },
           {
-            title: "GenAI",
-            items: ["RAG", "LangChain", "Pinecone", "Langfuse", "RAGAS", "Hugging Face", "OpenAI API", "Ollama", "Fine-tuning (LoRA)", "Transformers", "NLP"]
+            title: "GenAI and LLMs",
+            items: ["RAG", "LangChain", "LangGraph", "Vector DBs (ChromaDB, Pinecone)", "Ollama", "MCP", "Finetuning (LoRA)", "Langfuse", "RAGAS", "AI-assisted development", "Agentic Systems"]
           },
           {
             title: "Frameworks",
-            items: ["FastAPI", "Flask", "Django", "Node.js", "React", "REST APIs", "Postman", "Firebase", "Docker", "AWS", "Azure", "GCP"]
+            items: ["FastAPI", "Flask", "Django", "Node.js", "React", "Postman", "Firebase", "Docker", "Kubernetes", "AWS", "Azure"]
           },
           {
             title: "Analytics",
-            items: ["scikit-learn", "PyTorch", "TensorFlow", "XGBoost", "Random Forest", "MLflow", "Weights & Biases", "Hypothesis Testing", "A/B Testing", "Causal Inference", "Regression", "Time Series", "Bayesian Analysis", "ANOVA", "Tableau", "Power BI", "Excel"]
+            items: ["scikit-learn", "PyTorch", "TensorFlow", "MLflow", "Weights & Biases", "A/B Testing", "Causal Inference", "Tableau", "Power BI", "Excel"]
           },
         ].map(block => (
           <article
             key={block.title}
             className="bg-bg/80 backdrop-blur-sm border border-border rounded-2xl shadow-soft p-5 flex flex-col w-full transition-transform duration-200 hover:scale-105 overflow-hidden"
           >
-            {/* macOS title bar */}
             <div className="-mx-5 -mt-5 px-4 py-2.5 rounded-t-2xl bg-[#0f1e3d] mb-4 flex items-center gap-2 group/bar relative">
               <span className="w-3 h-3 rounded-full bg-[#ff5f57] flex-shrink-0 flex items-center justify-center">
                 <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a0000] text-[8px] font-bold leading-none transition-opacity duration-150">×</span>
@@ -47,7 +46,7 @@ export default function Skills() {
               {block.items.map(it => (
                 <span
                   key={it}
-                  className="font-mono text-[11px] font-bold border-2 border-fg bg-fg text-bg rounded-full px-3 py-1 hover:bg-bg hover:text-fg transition-colors duration-200"
+                  className="font-inter text-[11px] font-bold border-2 border-fg bg-fg text-bg rounded-full px-3 py-1 hover:bg-bg hover:text-fg transition-colors duration-200"
                 >
                   {it}
                 </span>

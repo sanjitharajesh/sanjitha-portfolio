@@ -8,8 +8,9 @@ export default {
         border: "#DAE0E9",
       },
       fontFamily: {
-        inter: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['Roboto Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        inter: ['"Open Sauce One"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"Source Serif Pro"', 'Georgia', 'serif'],
+        courier: ['"Courier New"', 'Courier', 'monospace'],
         anka: ['Anka Coder', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
         quote: ['"Arial MT Pro"', 'Arial', 'sans-serif'],
       },

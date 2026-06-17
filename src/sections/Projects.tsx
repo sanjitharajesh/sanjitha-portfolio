@@ -3,7 +3,7 @@ export default function Projects() {
     {
       title: "Consumer Payment Behavior Analysis",
       date: "Jan – Mar 2026",
-      description: "Analyzed 58,000+ records across federal financial data using Python; applied causal inference methods to quantify behavioral differences between digital and cash payment users. Deployed an application — Financial Vulnerability Risk Scorer (Django + React) translating odds ratios and BNPL risk into personalized financial risk tiers and targeted guidance for underserved users.",
+      description: "Analyzed 58,000+ records across federal financial data using Python; applied causal inference methods to quantify behavioral differences between digital and cash payment users. Deployed an application - Financial Vulnerability Risk Scorer (Django + React) translating odds ratios and BNPL risk into personalized financial risk tiers and targeted guidance for underserved users.",
       github: "#"
     },
     {
@@ -13,31 +13,31 @@ export default function Projects() {
       github: "https://github.com/sanjitharajesh/billbuddy"
     },
     {
-      title: "MediQuery — LLM-Powered Drug Query System",
+      title: "MediQuery - LLM-Powered Drug Query System",
       date: "Dec 2025",
       description: "Architected a hybrid RAG pipeline over 100+ FDA drug label PDFs using BM25 and Pinecone vector retrieval orchestrated via LangChain, using Langfuse tracing to benchmark local vs. hosted configurations. Built a 19-query RAGAS evaluation framework across 7 categories including expected-failure cases.",
       github: "https://github.com/sanjitharajesh/mediquery"
     },
     {
-      title: "FinGuard — Financial Transaction Fraud Monitoring System",
+      title: "FinGuard- Fraud Monitor",
       date: "Oct – Dec 2025",
       description: "Designed a fraud detection system in Flask and PostgreSQL implementing configurable rule-based detection across 24 merchant risk tiers, containerized with Docker, with automated alert workflows and admin dashboards. Integrated a natural language to SQL interface using SQLCoder-7B via Ollama, enabling non-technical admins to query transaction data in plain English without writing SQL.",
       github: "https://github.com/sanjitharajesh/ftransaction-2025"
     },
     {
-      title: "CodeMixTranslate — Neural Machine Translation for Code-Switched Text",
+      title: "CodeMixTranslate- MT for Code-Switching",
       date: "Oct – Dec 2025",
       description: "Designed a multilingual translation pipeline in PyTorch benchmarking mT5, MarianMT, and NLLB-200 on 743 low-resource Hinglish and Spanglish samples, achieving a best BLEU score of 63.12 with NLLB-200.",
       github: "https://github.com/sanjitharajesh/codemixtranslation"
     },
     {
-      title: "Transfer Learning on Chest X-rays with EfficientNet",
+      title: "Transfer Learning on Chest X-Rays",
       date: "Feb – May 2025",
       description: "Fine-tuned EfficientNet-B0 in PyTorch for multi-class pneumonia and tuberculosis classification from chest X-ray images, with an end-to-end inference pipeline featuring data augmentation and hyperparameter tuning.",
       github: "https://github.com/sanjitharajesh/efficientnet-xray"
     },
     {
-      title: "SomniSage — Sleep Stage Classification",
+      title: "SomniSage: Sleep Stage Classification",
       date: "Jan – May 2024",
       description: "Built deep learning pipelines to classify sleep stages from PSG physiological signals using twin CNN (82% accuracy) and Bi-LSTM (84% accuracy) architectures in PyTorch, with multi-channel signal preprocessing and artifact rejection on clinical time-series data.",
       github: "https://github.com/sanjitharajesh/somnisage"
@@ -49,7 +49,7 @@ export default function Projects() {
       github: "https://github.com/sanjitharajesh/air-quality-vis"
     },
     {
-      title: "GestuRise — Hand Gesture Control System",
+      title: "GestuRise: Hand Gesture Control System",
       date: "Jun – Jul 2023",
       description: "Built a real-time hand gesture recognition system using MediaPipe for landmark extraction, TensorFlow for model training, and PyAutoGUI for gesture-to-action mapping. Achieved 86% classification accuracy on 500+ video samples through a dual classifier architecture: MLP for static signs and LSTM for dynamic gesture sequences.",
       github: "https://github.com/sanjitharajesh/gesturise"
@@ -58,7 +58,7 @@ export default function Projects() {
 
   return (
     <>
-      <h2 id="projects" className="font-mono font-bold text-[clamp(22px,3.2vw,30px)] mt-16 md:mt-64 mb-8 scroll-mt-36 text-center">
+      <h2 id="projects" className="font-mono font-bold text-[clamp(28px,4vw,38px)] mt-16 md:mt-64 mb-8 scroll-mt-36 text-center">
         <span className="relative inline-block hover:scale-110 transition-all duration-200 group">
           projects
           <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>
@@ -70,21 +70,30 @@ export default function Projects() {
             key={idx}
             className="bg-bg/80 backdrop-blur-sm border border-border rounded-2xl shadow-soft p-5 flex flex-col transition-transform duration-200 hover:scale-105"
           >
-            <div className="flex items-start justify-between gap-3 -mx-5 -mt-5 px-5 py-4 rounded-t-2xl bg-[#1a2a52]/95 mb-3">
-              <div className="flex-grow">
-                <h3 className="font-mono font-semibold text-[15px] leading-snug text-[#e9f1ff]">{project.title}</h3>
-              </div>
+            <div className="-mx-5 -mt-5 px-4 py-2.5 rounded-t-2xl bg-[#1a2a52]/95 mb-3 flex items-center gap-2 group/bar relative">
+              <span className="w-3 h-3 rounded-full bg-[#ff5f57] flex-shrink-0 flex items-center justify-center">
+                <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a0000] text-[8px] font-bold leading-none transition-opacity duration-150">×</span>
+              </span>
+              <span className="w-3 h-3 rounded-full bg-[#febc2e] flex-shrink-0 flex items-center justify-center">
+                <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a5500] text-[8px] font-bold leading-none transition-opacity duration-150">−</span>
+              </span>
+              <span className="w-3 h-3 rounded-full bg-[#28c840] flex-shrink-0 flex items-center justify-center">
+                <span className="opacity-0 group-hover/bar:opacity-100 text-[#003d00] text-[8px] font-bold leading-none transition-opacity duration-150">+</span>
+              </span>
+              <span className="absolute inset-0 flex items-center justify-center font-mono font-semibold text-[14px] leading-snug text-[#e9f1ff] pl-10 pr-3 text-center pointer-events-none">{project.title}</span>
+            </div>
+            <div className="flex items-center justify-between mb-3">
+              <span className="font-mono text-[12px] font-semibold opacity-90">{project.date}</span>
               <a
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="flex-shrink-0 font-mono text-[11px] font-bold border-2 border-[#e9f1ff] bg-[#e9f1ff] text-[#1a2a52] rounded-full px-3 py-1 hover:bg-transparent hover:text-[#e9f1ff] transition-colors duration-200"
+                className="font-mono text-[11px] font-bold border border-fg bg-bg text-fg rounded-full px-3 py-1 hover:bg-fg hover:text-bg transition-colors duration-200"
                 title="View source code"
               >
                 CODE
               </a>
             </div>
-            <span className="font-mono text-[12px] font-semibold opacity-90 mb-3">{project.date}</span>
             <p className="text-[15px] leading-relaxed">{project.description}</p>
           </article>
         ))}

@@ -39,7 +39,7 @@ export default function Clock() {
   }, []);
 
   return (
-    <div className="flex gap-1 items-baseline leading-none text-[clamp(12px,2vw,16px)]">
+    <div className="flex gap-1 items-baseline leading-none text-[clamp(10px,1.7vw,13px)]">
       <span className="font-bold">{location},</span>
       <span className="font-medium">{time}</span>
     </div>
