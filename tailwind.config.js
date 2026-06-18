@@ -11,6 +11,8 @@ export default {
         inter: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
         courier: ['"Courier New"', 'Courier', 'monospace'],
+        roboto: ['"Roboto Mono"', 'monospace'],
+        space: ['"Space Mono"', 'monospace'],
       },
       boxShadow: {
         soft: "0 4px 24px rgba(0,0,0,0.18)",

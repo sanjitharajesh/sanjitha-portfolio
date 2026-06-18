@@ -3,7 +3,7 @@ import profile from "../assets/profilephoto.jpeg";
 export default function Intro() {
   return (
     <>
-      <section aria-label="Intro" className="mt-[130px] mb-2">
+      <section aria-label="Intro" className="mt-[138px] mb-2">
         <div className="max-w-[1280px] mx-auto">
 
           {/* Two-column hero: text left, photo right */}
@@ -11,13 +11,13 @@ export default function Intro() {
 
             {/* Left column */}
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 min-w-[520px]">
-              <div className="font-courier font-bold text-[clamp(1.9rem,4vw,2.4rem)] leading-tight tracking-tight">
+              <div className="font-courier font-normal text-[clamp(1.9rem,4vw,2.4rem)] leading-tight tracking-[-0.03em]">
                 <span className="typing-wrap">
                   <span className="typing-ghost" aria-hidden="true">
-                    Hi, I'm Sanjitha Rajesh.
+                    Hi, I'm <span className="font-bold">Sanjitha Rajesh.</span>
                   </span>
                   <span className="typing-line typing-abs">
-                    Hi, I'm Sanjitha Rajesh.
+                    Hi, I'm <span className="font-bold">Sanjitha Rajesh.</span>
                   </span>
                 </span>
               </div>
