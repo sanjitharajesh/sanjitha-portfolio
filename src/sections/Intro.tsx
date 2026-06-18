@@ -11,6 +11,16 @@ export default function Intro() {
 
             {/* Left column */}
             <div className="w-full lg:flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
+              <div className="font-mono font-light text-[clamp(26px,3.2vw,34px)] leading-relaxed">
+                <span className="typing-wrap">
+                  <span className="typing-ghost" aria-hidden="true">
+                    Hi, I'm <span className="font-light">Sanjitha Rajesh.</span>
+                  </span>
+                  <span className="typing-line typing-abs">
+                    Hi, I'm <span className="font-light">Sanjitha Rajesh.</span>
+                  </span>
+                </span>
+              </div>
               <p className="font-inter font-medium text-[1.05rem] text-fg">
                 MS in Statistics - Data Science at Rutgers University
               </p>
