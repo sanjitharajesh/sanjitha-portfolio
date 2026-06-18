@@ -9,9 +9,11 @@ export default {
       },
       fontFamily: {
         inter: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        mono: ['"Courier New"', 'Courier', 'monospace'],
       },
-      boxShadow: { soft: "0 8px 30px rgba(0,0,0,.06)" },
+      boxShadow: {
+        soft: "0 4px 24px rgba(0,0,0,0.18)",
+      },
       maxWidth: { "62ch": "62ch" },
     },
   },

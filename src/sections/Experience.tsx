@@ -60,17 +60,18 @@ const experiences = [
 export default function Experience() {
   return (
     <>
-      <h2 id="experience" className="font-inter font-bold text-[clamp(28px,4vw,38px)] mt-[50px] md:mt-64 mb-12 scroll-mt-36 text-center">
+      <h2 id="experience" className="font-inter font-bold text-[clamp(28px,4vw,38px)] mt-12 md:mt-20 mb-12 scroll-mt-36 text-center">
         <span className="relative inline-block hover:scale-110 transition-all duration-200 group">
           experience
           <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>
         </span>
       </h2>
-      <section className="grid gap-6 mt-12">
+      <section className="grid gap-6">
         {experiences.map((exp) => (
-          <article key={exp.company} className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
-            <div className="-mx-4 -mt-4 px-4 py-3 rounded-t-2xl bg-[#1a2a52]/95 mb-3 flex items-start gap-3 group/bar">
-              <div className="flex gap-1.5 pt-[3px] flex-shrink-0">
+          <article key={exp.company} className="bg-bg border border-border rounded-2xl overflow-hidden shadow-soft transition-transform duration-200 hover:scale-105">
+            {/* Dark header: mac dots + company + location only */}
+            <div className="px-4 py-3 bg-[#1a2a52]/95 flex items-center gap-3 group/bar">
+              <div className="flex gap-1.5 flex-shrink-0">
                 <span className="w-3 h-3 rounded-full bg-[#ff5f57] flex items-center justify-center">
                   <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a0000] text-[8px] font-bold leading-none transition-opacity duration-150">×</span>
                 </span>
@@ -81,18 +82,17 @@ export default function Experience() {
                   <span className="opacity-0 group-hover/bar:opacity-100 text-[#003d00] text-[8px] font-bold leading-none transition-opacity duration-150">+</span>
                 </span>
               </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-baseline justify-between gap-2">
-                  <span className="font-mono font-semibold text-[15px] text-[#e9f1ff] truncate">{exp.company}</span>
-                  <span className="font-mono text-[12px] font-semibold text-[#dfe8ff] whitespace-nowrap flex-shrink-0">{exp.location}</span>
-                </div>
-                <div className="flex items-baseline justify-between gap-2 mt-1">
-                  <span className="font-inter text-[13px] text-[#c8d4f0]">{exp.role}</span>
-                  <span className="font-mono text-[12px] text-[#c8d4f0] whitespace-nowrap flex-shrink-0">{exp.date}</span>
-                </div>
+              <div className="flex-1 min-w-0 flex items-baseline justify-between gap-3">
+                <span className="font-inter font-bold text-[15px] text-[#e9f1ff] truncate">{exp.company}</span>
+                <span className="font-inter text-[12px] text-[#dfe8ff] whitespace-nowrap flex-shrink-0">{exp.location}</span>
               </div>
             </div>
-            <div className="mt-3">
+            {/* Light content area: role + date, then bullets */}
+            <div className="p-4 pt-3">
+              <div className="flex items-baseline justify-between mb-3">
+                <span className="font-inter font-semibold text-[14px] text-fg">{exp.role}</span>
+                <span className="font-inter text-[13px] text-fg/55 whitespace-nowrap">{exp.date}</span>
+              </div>
               <ul className="list-disc list-outside ml-4 space-y-1.5 text-[15px] leading-relaxed font-inter">
                 {exp.bullets.map((b, i) => (
                   <li key={i}>{b}</li>

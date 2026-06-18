@@ -11,7 +11,7 @@ const research = [
 export default function Research() {
   return (
     <>
-      <h2 id="research" className="font-mono font-bold text-[clamp(28px,4vw,38px)] mt-12 md:mt-32 mb-12 scroll-mt-36 text-center">
+      <h2 id="research" className="font-inter font-bold text-[clamp(28px,4vw,38px)] mt-12 md:mt-32 mb-12 scroll-mt-36 text-center">
         <span className="relative inline-block hover:scale-110 transition-all duration-200 group">
           research
           <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>

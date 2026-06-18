@@ -69,7 +69,7 @@ const projects: Project[] = [
     date: "Jan – Mar 2026",
     teaser: "Causal inference on 58,000+ federal financial records revealing a 13.24x odds ratio among banked individuals. Deployed as a financial risk scoring web application.",
     description: "Analyzed 58,000+ records across 3 federal financial datasets (FDIC, CFPB, SHED); applied causal inference methods including Mann-Whitney U and Chi-square tests, revealing a 13.24x odds ratio among banked individuals and a 24pp savings gap for BNPL users. Deployed the Financial Vulnerability Risk Scorer in Django and React translating statistical findings into personalized financial risk tiers for underserved users.",
-    github: "#",
+    github: "https://github.com/sanjitharajesh/financial-wellness",
     demo: "https://financial-wellness.up.railway.app/",
     tags: ["Python", "Django", "React", "Causal Inference", "FDIC/CFPB/SHED"],
   },
