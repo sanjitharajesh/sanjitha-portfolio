@@ -5,7 +5,6 @@ import Experience from "./sections/Experience";
 import Education from "./sections/Education";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
-import Research from "./sections/Research";
 import Contact from "./sections/Contact";
 
 export default function App() {
@@ -17,7 +16,6 @@ export default function App() {
         <Experience />
         <Projects />
         <Skills />
-        <Research />
         <Education />
         <Contact />
         <footer className="text-center mt-16 pb-6">

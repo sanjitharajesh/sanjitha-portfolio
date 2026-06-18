@@ -22,12 +22,12 @@ export default function Intro() {
                 </span>
               </div>
 
-              <p className="font-inter font-bold italic text-[1.2rem] text-fg">
+              <p className="font-inter font-semibold text-[1.2rem] text-fg">
                 MS in Statistics - Data Science at Rutgers University
               </p>
 
-              <p className="font-inter font-semibold italic text-[0.95rem] text-fg/80 leading-relaxed">
-                Actively seeking: AI/ML Engineer · Data Scientist · Data Engineer · Analytics Engineer — open to connecting
+              <p className="font-inter font-normal text-[0.95rem] text-fg/80 leading-relaxed">
+                Actively seeking: AI/ML Engineer · Data Scientist · Software Engineer · Data Analyst — open to connecting
               </p>
 
               <p className="font-inter font-semibold italic text-[0.88rem] tracking-widest text-fg/60 leading-loose">
@@ -90,31 +90,14 @@ export default function Intro() {
               <div className="bg-[#E6EDF4] p-7">
                 <div className="text-[0.95rem] leading-relaxed space-y-4 text-[#122654] font-inter">
                   <p>
-                    I am finishing my <strong>MS in Statistics and Data Science</strong> at <strong>Rutgers University</strong>, where I work as a Research Assistant at the <strong>SHIRE Lab</strong> studying <strong>implicit bias in Vision Language Models</strong>.
+                    Hey, I'm Sanjitha. I'm finishing my <strong>Master's in Statistics and Data Science</strong> at Rutgers, where my coursework has covered <strong>NLP, deep learning, time series analysis, database systems, causal inference, and financial data mining</strong>. I like building end-to-end AI products that are actually trustworthy — not just accurate on a benchmark but reliable when real people use them. That means <strong>RAG systems</strong> with real retrieval quality, <strong>agentic workflows</strong> that can reason across multiple steps and tools, and full-stack applications I can ship fast and iterate on. I move quickly from idea to working product and I genuinely enjoy that part — there is always one more thing to fix and I am usually the last one to walk away from it.
+                  </p>
+                  <p className="font-mono text-[0.85rem] text-fg/70">
+                    Tech stack: <strong className="text-fg">Python, LangChain, FastAPI, React, SQL, AWS</strong>
                   </p>
                   <p>
-                    I build <strong>production AI systems</strong> — <strong>RAG pipelines</strong> with hybrid retrieval and evaluation frameworks, <strong>LLM observability tooling</strong>, and <strong>full-stack AI applications</strong> across healthcare and financial domains. I care about the gap between a model that performs well in evaluation and one that holds up when <strong>real users interact with it</strong>.
+                    Right now I am also assisting with research at the <strong>SHIRE Lab at Rutgers</strong>, studying how Vision Language Models represent race and social identity differently from humans. I am actively looking for <strong>full-time roles in AI/ML engineering, data science, and software engineering</strong> starting immediately. Outside of this, I am usually listening to music, reading, or on my third (or maybe fifth?) coffee of the day.
                   </p>
-                  <div className="space-y-2.5 pt-1">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-mono text-[10px] font-bold text-fg/50 uppercase tracking-widest w-24 flex-shrink-0">RAG</span>
-                      {["BM25", "Pinecone", "RAGAS", "LLM-as-judge", "Langfuse"].map(t => (
-                        <span key={t} className="font-inter text-[11px] font-semibold border border-fg/30 text-fg/70 rounded-full px-2.5 py-0.5 bg-fg/5">{t}</span>
-                      ))}
-                    </div>
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-mono text-[10px] font-bold text-fg/50 uppercase tracking-widest w-24 flex-shrink-0">Pipelines</span>
-                      {["LangChain", "LangGraph", "Tool-calling", "FastAPI"].map(t => (
-                        <span key={t} className="font-inter text-[11px] font-semibold border border-fg/30 text-fg/70 rounded-full px-2.5 py-0.5 bg-fg/5">{t}</span>
-                      ))}
-                    </div>
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-mono text-[10px] font-bold text-fg/50 uppercase tracking-widest w-24 flex-shrink-0">Infra</span>
-                      {["AWS", "Docker", "Kubernetes", "MLflow"].map(t => (
-                        <span key={t} className="font-inter text-[11px] font-semibold border border-fg/30 text-fg/70 rounded-full px-2.5 py-0.5 bg-fg/5">{t}</span>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

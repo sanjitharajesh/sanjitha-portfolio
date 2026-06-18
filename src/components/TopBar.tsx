@@ -1,4 +1,4 @@
-const NAV_LINKS = ["Experience", "Projects", "Skills", "Research", "Education", "Contact"];
+const NAV_LINKS = ["Experience", "Projects", "Skills", "Education", "Contact"];
 
 export default function TopBar() {
   return (
