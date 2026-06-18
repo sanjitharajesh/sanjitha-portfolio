@@ -11,13 +11,13 @@ export default function Intro() {
 
             {/* Left column */}
             <div className="w-full lg:flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
-              <div className="font-mono font-light text-[clamp(26px,3.2vw,34px)] leading-relaxed">
+              <div className="font-inter font-light text-[clamp(26px,3.2vw,34px)] leading-relaxed">
                 <span className="typing-wrap">
                   <span className="typing-ghost" aria-hidden="true">
-                    Hi, I'm <span className="font-light">Sanjitha Rajesh.</span>
+                    Hi, I'm Sanjitha Rajesh.
                   </span>
                   <span className="typing-line typing-abs">
-                    Hi, I'm <span className="font-light">Sanjitha Rajesh.</span>
+                    Hi, I'm Sanjitha Rajesh.
                   </span>
                 </span>
               </div>
@@ -25,9 +25,9 @@ export default function Intro() {
                 MS in Statistics - Data Science at Rutgers University
               </p>
               <p className="font-inter font-light text-[0.85rem] text-fg/60 leading-relaxed">
-                Actively seeking: AI/ML Engineer · Data Scientist · Data Analyst · Software Engineer — open to connecting
+                Actively seeking: AI/ML Engineer · Data Scientist · Data Engineer · Analytics Engineer — open to connecting
               </p>
-              <p className="font-mono text-[0.7rem] tracking-widest text-fg/45 leading-loose">
+              <p className="font-inter text-[0.78rem] tracking-widest text-fg/45 leading-loose">
                 RAG Pipelines · LLM Observability · Full Stack AI | Python, SQL, TypeScript | AI/ML Research
               </p>
               <div className="flex flex-wrap gap-3 mt-2 justify-center lg:justify-start">
