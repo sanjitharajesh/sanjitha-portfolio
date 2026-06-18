@@ -3,15 +3,15 @@ import profile from "../assets/profilephoto.jpeg";
 export default function Intro() {
   return (
     <>
-      <section aria-label="Intro" className="mt-[113px] mb-2">
-        <div className="max-w-[1120px] mx-auto px-8">
+      <section aria-label="Intro" className="mt-[130px] mb-2">
+        <div className="max-w-[1280px] mx-auto">
 
-          {/* Two-column: text left (~58%), photo right (~42%) */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-20 items-center">
+          {/* Two-column hero: text left, photo right */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_330px] gap-10 lg:gap-[160px] items-center">
 
             {/* Left column */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 min-w-0">
-              <div className="font-courier font-bold text-[clamp(3.2rem,5vw,3.8rem)] leading-tight">
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 min-w-[520px]">
+              <div className="font-courier font-bold text-[clamp(1.9rem,4vw,2.4rem)] leading-tight tracking-tight">
                 <span className="typing-wrap">
                   <span className="typing-ghost" aria-hidden="true">
                     Hi, I'm Sanjitha Rajesh.
@@ -22,19 +22,22 @@ export default function Intro() {
                 </span>
               </div>
 
-              <p className="font-inter font-semibold text-[1.2rem] text-fg">
-                MS in Statistics - Data Science at Rutgers University
+              <p className="font-inter font-extrabold text-[1.25rem] text-fg">
+                MS in Data Science at Rutgers University
               </p>
 
-              <p className="font-inter font-normal text-[0.95rem] text-fg/80 leading-relaxed">
-                Actively seeking: AI/ML Engineer · Data Scientist · Software Engineer · Data Analyst — open to connecting
+              <div className="bg-[#1a2a52] rounded-2xl px-5 py-2 self-center lg:self-start">
+                <p className="font-inter font-bold text-[0.92rem] text-[#dfe8ff] leading-snug">
+                  Actively Seeking: AI/ML Engineer, Data Scientist, SWE Roles
+                </p>
+              </div>
+
+              <p className="font-inter font-bold text-[0.95rem] text-fg/60 leading-relaxed">
+                AI-Native Builder · RAG & Agentic Systems |<br />
+                Python · SQL · PyTorch · LangChain | AI/ML Research
               </p>
 
-              <p className="font-inter font-semibold italic text-[0.88rem] tracking-widest text-fg/60 leading-loose">
-                RAG Pipelines · LLM Observability · Full Stack AI | Python, SQL, TypeScript | AI/ML Research
-              </p>
-
-              <div className="flex flex-wrap gap-2.5 mt-1 justify-center lg:justify-start">
+              <div className="flex flex-wrap gap-3 mt-2 justify-center">
                 <a
                   href="https://drive.google.com/file/d/1Ww3V7GDXizX8vWTHZArAMa2BtnfTH3GO/view?usp=sharing"
                   target="_blank"
@@ -67,15 +70,15 @@ export default function Intro() {
               <img
                 src={profile}
                 alt="Sanjitha Rajesh – profile photo"
-                className="w-[260px] sm:w-[290px] lg:w-[320px] max-w-full rounded-xl shadow-soft transition-transform duration-200 hover:scale-105"
+                className="w-[260px] sm:w-[300px] lg:w-[320px] max-w-full rounded-xl shadow-soft transition-transform duration-200 hover:scale-105"
               />
             </div>
           </div>
 
-          {/* Full-width About Me below both columns */}
-          <div className="mt-[65px] max-w-[720px] mx-auto transition-transform duration-300 hover:scale-[1.005]">
+          {/* About Me below hero */}
+          <div className="mt-[65px] max-w-[460px] mx-auto transition-transform duration-300 hover:scale-[1.005]">
             <div className="border border-[#2a3a6a] rounded-2xl shadow-soft overflow-hidden">
-              <div className="bg-[#0f1e3d] px-4 py-2.5 flex items-center gap-2 group/bar">
+              <div className="bg-[#0f1e3d] px-4 py-2 flex items-center gap-2 group/bar">
                 <span className="w-3 h-3 rounded-full bg-[#ff5f57] flex-shrink-0 flex items-center justify-center">
                   <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a0000] text-[8px] font-bold leading-none transition-opacity duration-150">×</span>
                 </span>
@@ -85,18 +88,15 @@ export default function Intro() {
                 <span className="w-3 h-3 rounded-full bg-[#28c840] flex-shrink-0 flex items-center justify-center">
                   <span className="opacity-0 group-hover/bar:opacity-100 text-[#003d00] text-[8px] font-bold leading-none transition-opacity duration-150">+</span>
                 </span>
-                <span className="ml-2 text-[#b0b8cc] text-sm font-mono font-semibold">About Me</span>
+                <span className="ml-2 text-[#b0b8cc] text-xs font-mono font-semibold">About Me</span>
               </div>
-              <div className="bg-[#E6EDF4] p-7">
-                <div className="text-[0.95rem] leading-relaxed space-y-4 text-[#122654] font-inter">
+              <div className="bg-[#E6EDF4] p-6">
+                <div className="space-y-2.5 text-[0.78rem] leading-relaxed text-[#122654] font-inter">
                   <p>
-                    Hey, I'm Sanjitha. I'm finishing my <strong>Master's in Statistics and Data Science</strong> at Rutgers, where my coursework has covered <strong>NLP, deep learning, time series analysis, database systems, causal inference, and financial data mining</strong>. I like building end-to-end AI products that are actually trustworthy — not just accurate on a benchmark but reliable when real people use them. That means <strong>RAG systems</strong> with real retrieval quality, <strong>agentic workflows</strong> that can reason across multiple steps and tools, and full-stack applications I can ship fast and iterate on. I move quickly from idea to working product and I genuinely enjoy that part — there is always one more thing to fix and I am usually the last one to walk away from it.
-                  </p>
-                  <p className="font-mono text-[0.85rem] text-fg/70">
-                    Tech stack: <strong className="text-fg">Python, LangChain, FastAPI, React, SQL, AWS</strong>
+                    Hey, I'm Sanjitha. I build end-to-end AI products that are <strong>trustworthy in production</strong>: <strong>RAG systems</strong> with real retrieval quality, <strong>agentic workflows</strong>, and <strong>full-stack applications</strong> I can ship fast. From the moment I get an idea to a working deployment, I do not stop: there is always one more bug to fix, one more edge case to handle. I enjoy working with and learning from inspired people, and I'm always looking to maximize my knowledge at every turn.
                   </p>
                   <p>
-                    Right now I am also assisting with research at the <strong>SHIRE Lab at Rutgers</strong>, studying how Vision Language Models represent race and social identity differently from humans. I am actively looking for <strong>full-time roles in AI/ML engineering, data science, and software engineering</strong> starting immediately. Outside of this, I am usually listening to music, reading, or on my third (or maybe fifth?) coffee of the day.
+                    Right now I am also assisting with research at the <strong>SHIRE Lab at Rutgers</strong>, studying how VLMs represent social identity differently from humans. I am actively looking for <strong>full-time roles in AI/ML engineering, data science, and software engineering</strong> starting immediately. Outside of this, I am usually listening to music, reading, or on my third (or maybe fifth?) coffee of the day.
                   </p>
                 </div>
               </div>

@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div className="bg-bg text-fg font-inter antialiased">
       <TopBar />
-      <main className="max-w-[1040px] mx-auto px-8">
+      <main className="max-w-[1040px] mx-auto px-8 pt-px">
         <Intro />
         <Experience />
         <Projects />

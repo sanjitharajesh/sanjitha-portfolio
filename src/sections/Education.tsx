@@ -15,13 +15,31 @@ const education = [
   },
 ];
 
+import { useRef, useEffect, useState } from "react";
+
 export default function Education() {
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { setVisible(entry.isIntersecting); },
+      { threshold: 0.5 }
+    );
+    if (headingRef.current) observer.observe(headingRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <h2 id="education" className="font-inter font-bold text-[clamp(28px,4vw,38px)] mt-12 md:mt-32 mb-8 scroll-mt-36 text-center">
-        <span className="relative inline-block hover:scale-110 transition-all duration-200 group">
+      <h2
+        ref={headingRef}
+        id="education"
+        className={`font-inter font-bold text-[clamp(28px,4vw,38px)] mt-12 md:mt-32 mb-8 scroll-mt-36 text-center transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}
+      >
+        <span className="relative inline-block">
           education
-          <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>
+          <span className={`absolute bottom-[-4px] left-0 h-[2px] bg-fg transition-all duration-700 delay-300 ${visible ? "w-full" : "w-0"}`}></span>
         </span>
       </h2>
       <section className="grid gap-3">
