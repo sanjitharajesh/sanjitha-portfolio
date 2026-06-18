@@ -7,7 +7,7 @@ export default function TopBar() {
         <div className="font-mono font-bold leading-none text-[clamp(12px,2vw,15px)] text-[#e9f1ff]">
           sanjitha's portfolio
         </div>
-        <nav className="hidden md:flex items-center gap-7 lg:gap-10">
+        <nav className="hidden md:flex items-center gap-7 lg:gap-10 pr-6">
           {NAV_LINKS.map((link) => (
             <a
               key={link}

@@ -17,20 +17,29 @@ export default function Research() {
           <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>
         </span>
       </h2>
-      <section className="grid gap-6 mt-12">
+      <section className="grid gap-6">
         {research.map((entry) => (
-          <article key={entry.institution} className="bg-bg border border-border rounded-2xl p-4 shadow-soft transition-transform duration-200 hover:scale-105">
-            <div className="-mx-4 -mt-4 px-5 py-3 rounded-t-2xl bg-[#1a2a52]/95 mb-3">
-              <div className="flex items-baseline justify-between">
-                <span className="font-mono font-semibold text-[15px] text-[#e9f1ff]">{entry.institution}</span>
+          <article key={entry.institution} className="bg-bg border border-border rounded-2xl overflow-hidden shadow-soft transition-transform duration-200 hover:scale-105">
+            <div className="px-4 py-3 bg-[#1a2a52]/95 flex items-center gap-3 group/bar">
+              <div className="flex gap-1.5 flex-shrink-0">
+                <span className="w-3 h-3 rounded-full bg-[#ff5f57] flex items-center justify-center">
+                  <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a0000] text-[8px] font-bold leading-none transition-opacity duration-150">×</span>
+                </span>
+                <span className="w-3 h-3 rounded-full bg-[#febc2e] flex items-center justify-center">
+                  <span className="opacity-0 group-hover/bar:opacity-100 text-[#7a5500] text-[8px] font-bold leading-none transition-opacity duration-150">−</span>
+                </span>
+                <span className="w-3 h-3 rounded-full bg-[#28c840] flex items-center justify-center">
+                  <span className="opacity-0 group-hover/bar:opacity-100 text-[#003d00] text-[8px] font-bold leading-none transition-opacity duration-150">+</span>
+                </span>
               </div>
-              <div className="flex items-baseline justify-between mt-1">
-                <span className="text-[14px] text-[#c8d4f0]">{entry.role}</span>
-                <span className="text-[14px] text-[#c8d4f0] whitespace-nowrap">{entry.date}</span>
-              </div>
+              <span className="font-mono font-bold text-[15px] text-[#e9f1ff]">{entry.institution}</span>
             </div>
-            <div className="mt-3">
-              <p className="text-[15px] leading-relaxed">{entry.description}</p>
+            <div className="p-4 pt-3">
+              <div className="flex items-baseline justify-between mb-3">
+                <span className="font-inter font-semibold text-[14px] text-fg">{entry.role}</span>
+                <span className="font-inter text-[13px] text-fg/55 whitespace-nowrap">{entry.date}</span>
+              </div>
+              <p className="font-inter text-[15px] leading-relaxed">{entry.description}</p>
             </div>
           </article>
         ))}

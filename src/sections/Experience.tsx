@@ -83,8 +83,8 @@ export default function Experience() {
                 </span>
               </div>
               <div className="flex-1 min-w-0 flex items-baseline justify-between gap-3">
-                <span className="font-inter font-bold text-[15px] text-[#e9f1ff] truncate">{exp.company}</span>
-                <span className="font-inter text-[12px] text-[#dfe8ff] whitespace-nowrap flex-shrink-0">{exp.location}</span>
+                <span className="font-mono font-bold text-[15px] text-[#e9f1ff] truncate">{exp.company}</span>
+                <span className="font-mono text-[12px] text-[#dfe8ff] whitespace-nowrap flex-shrink-0">{exp.location}</span>
               </div>
             </div>
             {/* Light content area: role + date, then bullets */}

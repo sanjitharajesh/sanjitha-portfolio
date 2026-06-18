@@ -1,7 +1,7 @@
 export default function Skills() {
   return (
     <>
-      <h2 id="skills" className="font-inter font-bold text-[clamp(22px,3.2vw,30px)] mt-12 md:mt-64 mb-8 scroll-mt-36 text-center">
+      <h2 id="skills" className="font-inter font-bold text-[clamp(28px,4vw,38px)] mt-12 md:mt-64 mb-8 scroll-mt-36 text-center">
         <span className="relative inline-block hover:scale-110 transition-all duration-200 group">
           skills
           <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-fg group-hover:w-full transition-all duration-300"></span>
