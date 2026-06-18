@@ -7,12 +7,6 @@ type Project = {
   tags: string[];
 };
 
-function splitFirst(text: string): [string, string] {
-  const idx = text.indexOf(". ");
-  if (idx === -1) return [text, ""];
-  return [text.slice(0, idx + 1), text.slice(idx + 2)];
-}
-
 function Tags({ tags }: { tags: string[] }) {
   return (
     <div className="flex flex-wrap gap-1.5 mt-3">
@@ -118,56 +112,47 @@ export default function Projects() {
       </h2>
 
       <section className="grid md:grid-cols-2 gap-7 mt-9">
-        {projects.map((project, idx) => {
-          const [first, rest] = splitFirst(project.description);
-          return (
-            <article
-              key={idx}
-              className="bg-bg/80 backdrop-blur-sm border border-border rounded-2xl shadow-soft p-5 flex flex-col transition-transform duration-200 hover:scale-105"
-            >
-              <div className="-mx-5 -mt-5 px-4 py-2.5 rounded-t-2xl bg-[#1a2a52]/95 mb-3 flex items-center gap-2 group/bar relative">
-                <MacDots />
-                <span className="absolute inset-0 flex items-center justify-center font-mono font-semibold text-[14px] leading-snug text-[#e9f1ff] pl-10 pr-3 text-center pointer-events-none">
-                  {project.title}
-                </span>
-              </div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="font-mono text-[12px] font-semibold opacity-90">{project.date}</span>
-                <div className="flex gap-2">
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-mono text-[11px] font-bold border border-fg bg-fg text-bg rounded-full px-3 py-1 hover:bg-bg hover:text-fg transition-colors duration-200"
-                    >
-                      LIVE
-                    </a>
-                  )}
+        {projects.map((project, idx) => (
+          <article
+            key={idx}
+            className="bg-bg/80 backdrop-blur-sm border border-border rounded-2xl shadow-soft p-5 flex flex-col transition-transform duration-200 hover:scale-105"
+          >
+            <div className="-mx-5 -mt-5 px-4 py-2.5 rounded-t-2xl bg-[#1a2a52]/95 mb-3 flex items-center gap-2 group/bar relative">
+              <MacDots />
+              <span className="absolute inset-0 flex items-center justify-center font-mono font-semibold text-[14px] leading-snug text-[#e9f1ff] pl-10 pr-3 text-center pointer-events-none">
+                {project.title}
+              </span>
+            </div>
+            <div className="flex items-center justify-between mb-3">
+              <span className="font-mono text-[12px] font-semibold opacity-90">{project.date}</span>
+              <div className="flex gap-2">
+                {project.demo && (
                   <a
-                    href={project.github}
+                    href={project.demo}
                     target="_blank"
                     rel="noreferrer"
-                    className="font-mono text-[11px] font-bold border border-fg bg-bg text-fg rounded-full px-3 py-1 hover:bg-fg hover:text-bg transition-colors duration-200"
+                    className="font-mono text-[11px] font-bold border border-fg bg-fg text-bg rounded-full px-3 py-1 hover:bg-bg hover:text-fg transition-colors duration-200"
                   >
-                    CODE
+                    LIVE
                   </a>
-                </div>
-              </div>
-              <div className="flex-1">
-                <p className="font-mono text-[10px] font-bold text-fg/45 uppercase tracking-widest mb-1">What I built</p>
-                <p className="font-inter text-[14px] leading-relaxed font-semibold">{first}</p>
-                {rest && (
-                  <>
-                    <p className="font-mono text-[10px] font-bold text-fg/45 uppercase tracking-widest mt-3 mb-1">Results</p>
-                    <p className="font-inter text-[14px] leading-relaxed">{rest}</p>
-                  </>
                 )}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-mono text-[11px] font-bold border border-fg bg-bg text-fg rounded-full px-3 py-1 hover:bg-fg hover:text-bg transition-colors duration-200"
+                >
+                  CODE
+                </a>
               </div>
-              <Tags tags={project.tags} />
-            </article>
-          );
-        })}
+            </div>
+            <div className="flex-1">
+              <p className="font-mono text-[10px] font-bold text-fg/45 uppercase tracking-widest mb-1">What I built</p>
+              <p className="font-inter text-[14px] leading-relaxed">{project.description}</p>
+            </div>
+            <Tags tags={project.tags} />
+          </article>
+        ))}
       </section>
     </>
   );

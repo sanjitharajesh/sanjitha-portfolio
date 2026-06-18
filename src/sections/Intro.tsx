@@ -11,7 +11,7 @@ export default function Intro() {
 
             {/* Left column */}
             <div className="w-full lg:flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-4">
-              <div className="font-mono font-light text-[clamp(26px,3.2vw,34px)] leading-relaxed">
+              <div className="font-courier font-bold text-[clamp(3.2rem,5vw,3.8rem)] leading-tight">
                 <span className="typing-wrap">
                   <span className="typing-ghost" aria-hidden="true">
                     Hi, I'm Sanjitha Rajesh.
@@ -22,15 +22,15 @@ export default function Intro() {
                 </span>
               </div>
 
-              <p className="font-inter font-semibold text-[1.15rem] text-fg">
+              <p className="font-inter font-bold italic text-[1.2rem] text-fg">
                 MS in Statistics - Data Science at Rutgers University
               </p>
 
-              <p className="font-inter font-light text-[0.9rem] text-fg/65 leading-relaxed">
+              <p className="font-inter font-semibold italic text-[0.95rem] text-fg/80 leading-relaxed">
                 Actively seeking: AI/ML Engineer · Data Scientist · Data Engineer · Analytics Engineer — open to connecting
               </p>
 
-              <p className="font-inter text-[0.82rem] tracking-widest text-fg/50 leading-loose">
+              <p className="font-inter font-semibold italic text-[0.88rem] tracking-widest text-fg/60 leading-loose">
                 RAG Pipelines · LLM Observability · Full Stack AI | Python, SQL, TypeScript | AI/ML Research
               </p>
 
@@ -73,7 +73,7 @@ export default function Intro() {
           </div>
 
           {/* Full-width About Me below both columns */}
-          <div className="mt-10 max-w-[970px] mx-auto transition-transform duration-300 hover:scale-[1.005]">
+          <div className="mt-[65px] max-w-[720px] mx-auto transition-transform duration-300 hover:scale-[1.005]">
             <div className="border border-[#2a3a6a] rounded-2xl shadow-soft overflow-hidden">
               <div className="bg-[#0f1e3d] px-4 py-2.5 flex items-center gap-2 group/bar">
                 <span className="w-3 h-3 rounded-full bg-[#ff5f57] flex-shrink-0 flex items-center justify-center">

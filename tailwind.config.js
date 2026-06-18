@@ -9,7 +9,8 @@ export default {
       },
       fontFamily: {
         inter: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['"Courier New"', 'Courier', 'monospace'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+        courier: ['"Courier New"', 'Courier', 'monospace'],
       },
       boxShadow: {
         soft: "0 4px 24px rgba(0,0,0,0.18)",
