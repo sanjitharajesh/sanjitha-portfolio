@@ -6,11 +6,11 @@ export default function Intro() {
       <section aria-label="Intro" className="mt-[113px] mb-2">
         <div className="max-w-[1120px] mx-auto px-8">
 
-          {/* Two-column: text stack left, photo right */}
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-32">
+          {/* Two-column: text left (~58%), photo right (~42%) */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-20 items-center">
 
             {/* Left column */}
-            <div className="w-full lg:flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-4">
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 min-w-0">
               <div className="font-courier font-bold text-[clamp(3.2rem,5vw,3.8rem)] leading-tight">
                 <span className="typing-wrap">
                   <span className="typing-ghost" aria-hidden="true">
@@ -63,11 +63,11 @@ export default function Intro() {
             </div>
 
             {/* Right column: photo */}
-            <div className="flex-shrink-0">
+            <div className="flex justify-center lg:justify-end">
               <img
                 src={profile}
                 alt="Sanjitha Rajesh – profile photo"
-                className="w-[280px] sm:w-[300px] lg:w-[320px] rounded-xl shadow-soft transition-transform duration-200 hover:scale-105"
+                className="w-[260px] sm:w-[290px] lg:w-[320px] max-w-full rounded-xl shadow-soft transition-transform duration-200 hover:scale-105"
               />
             </div>
           </div>
