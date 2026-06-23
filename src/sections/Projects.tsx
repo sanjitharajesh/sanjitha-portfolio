@@ -2,7 +2,7 @@ type Project = {
   title: string;
   date: string;
   description: string;
-  github: string;
+  github?: string;
   demo?: string;
   tags: string[];
 };
@@ -54,7 +54,7 @@ const projects: Project[] = [
     date: "Dec 2025",
     description: "Architected a production RAG system over 141 FDA drug label PDFs using hybrid BM25-Pinecone retrieval with section-aware chunking, Langfuse observability, and a 19-query RAGAS evaluation framework achieving 87% accuracy and under 5% hallucination rate. Features query decomposition for multi-drug queries, brand name normalization, corpus coverage detection, and automatic FDA label versioning via DailyMed.",
     github: "https://github.com/sanjitharajesh/mediquery",
-    demo: "https://mediquery.onrender.com",
+    demo: "https://mediquery-ai.onrender.com/",
     tags: ["LangChain", "Pinecone", "BM25", "Groq", "Langfuse", "RAGAS", "FastAPI"],
   },
   {
@@ -75,14 +75,13 @@ const projects: Project[] = [
     title: "Transfer Learning on Chest X-Rays",
     date: "Feb – May 2025",
     description: "Fine-tuned EfficientNet-B0 in PyTorch for multi-class pneumonia and tuberculosis classification from chest X-ray images, with an end-to-end inference pipeline featuring data augmentation and hyperparameter tuning.",
-    github: "https://github.com/sanjitharajesh/efficientnet-xray",
+    github: "https://github.com/sanjitharajesh/transfer-learning",
     tags: ["PyTorch", "EfficientNet-B0", "Medical Imaging"],
   },
   {
     title: "SomniSage: Sleep Stage Classification",
     date: "Jan – May 2024",
     description: "Built deep learning pipelines to classify sleep stages from PSG physiological signals using twin CNN (82% accuracy) and Bi-LSTM (84% accuracy) architectures in PyTorch, with multi-channel signal preprocessing and artifact rejection on clinical time-series data.",
-    github: "https://github.com/sanjitharajesh/somnisage",
     tags: ["PyTorch", "CNN", "Bi-LSTM", "Time Series"],
   },
   {
@@ -154,14 +153,16 @@ export default function Projects() {
                     LIVE
                   </a>
                 )}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-mono text-[11px] font-bold border border-fg bg-bg text-fg rounded-full px-3 py-1 hover:bg-fg hover:text-bg transition-colors duration-200"
-                >
-                  CODE
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-mono text-[11px] font-bold border border-fg bg-bg text-fg rounded-full px-3 py-1 hover:bg-fg hover:text-bg transition-colors duration-200"
+                  >
+                    CODE
+                  </a>
+                )}
               </div>
             </div>
             <div className="flex-1">

@@ -10,8 +10,8 @@ export default function Intro() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_330px] gap-10 lg:gap-[160px] items-center">
 
             {/* Left column */}
-            <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 min-w-[520px]">
-              <div className="font-courier font-normal text-[clamp(1.9rem,4vw,2.4rem)] leading-tight tracking-[-0.03em]">
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 min-w-0 w-full">
+              <div className="font-courier font-normal text-[clamp(1.5rem,6vw,2.4rem)] leading-tight tracking-[-0.03em]">
                 <span className="typing-wrap">
                   <span className="typing-ghost" aria-hidden="true">
                     Hi, I'm <span className="font-bold">Sanjitha Rajesh.</span>

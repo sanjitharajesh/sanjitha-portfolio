@@ -100,16 +100,16 @@ export default function Experience() {
                   <span className="opacity-0 group-hover/bar:opacity-100 text-[#003d00] text-[8px] font-bold leading-none transition-opacity duration-150">+</span>
                 </span>
               </div>
-              <div className="flex-1 min-w-0 flex items-baseline justify-between gap-3">
-                <span className="font-inter font-bold text-[15px] text-[#e9f1ff] truncate">{exp.company}</span>
-                <span className="font-inter text-[12px] text-[#dfe8ff] whitespace-nowrap flex-shrink-0">{exp.location}</span>
+              <div className="flex-1 min-w-0 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+                <span className="font-inter font-bold text-[14px] sm:text-[15px] text-[#e9f1ff]">{exp.company}</span>
+                <span className="font-inter text-[11px] sm:text-[12px] text-[#dfe8ff]">{exp.location}</span>
               </div>
             </div>
             {/* Light content area: role + date, then bullets */}
             <div className="p-4 pt-3">
-              <div className="flex items-baseline justify-between mb-3">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-2 mb-3">
                 <span className="font-inter font-semibold text-[14px] text-fg">{exp.role}</span>
-                <span className="font-inter text-[13px] text-fg/55 whitespace-nowrap">{exp.date}</span>
+                <span className="font-inter text-[13px] text-fg/55">{exp.date}</span>
               </div>
               <ul className="list-disc list-outside ml-4 space-y-1.5 text-[15px] leading-relaxed font-inter">
                 {exp.bullets.map((b, i) => (

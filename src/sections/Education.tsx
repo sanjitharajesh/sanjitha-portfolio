@@ -57,15 +57,15 @@ export default function Education() {
                   <span className="opacity-0 group-hover/bar:opacity-100 text-[#003d00] text-[8px] font-bold leading-none transition-opacity duration-150">+</span>
                 </span>
               </div>
-              <div className="flex-1 min-w-0 flex items-baseline justify-between gap-3">
-                <span className="font-mono font-bold text-[15px] text-[#e9f1ff] truncate">{edu.school}</span>
-                <span className="font-mono text-[12px] text-[#dfe8ff] whitespace-nowrap flex-shrink-0">{edu.location}</span>
+              <div className="flex-1 min-w-0 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+                <span className="font-mono font-bold text-[14px] sm:text-[15px] text-[#e9f1ff]">{edu.school}</span>
+                <span className="font-mono text-[11px] sm:text-[12px] text-[#dfe8ff]">{edu.location}</span>
               </div>
             </div>
             <div className="p-4 pt-3">
-              <div className="flex items-baseline justify-between gap-3 mb-2">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-2 mb-2">
                 <p className="font-inter font-semibold text-[14px] text-fg">{edu.degree}</p>
-                <span className="font-inter text-[13px] text-fg/55 whitespace-nowrap flex-shrink-0">{edu.dates}</span>
+                <span className="font-inter text-[13px] text-fg/55">{edu.dates}</span>
               </div>
               <p className="font-inter text-[14px] text-fg/80 leading-relaxed">Coursework: {edu.coursework}</p>
             </div>
